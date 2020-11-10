@@ -1,17 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import mitlog from "../../img/mit.jpg";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
-			</div>
-		</nav>
+		<div>
+			<nav className="navbar fixed-top mr-auto navbar-expand-lg  ">
+				<img id="logo" src={mitlog} />
+				<button
+					className="navbar-toggler "
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span className="navbar-toggler-icon bg-dark" />
+				</button>
+				<div className="collapse navbar-collapse " id="navbarNavAltMarkup">
+					<div className="navbar-nav ml-auto">
+						<Link className="nav-item nav-link active" to="/">
+							Home
+							<span className="sr-only">(current)</span>
+						</Link>
+						<Link className="nav-item nav-link" to="/About">
+							About
+						</Link>
+						<Link className="nav-item nav-link" to="/Services">
+							Services
+						</Link>
+						<Link className="nav-item nav-link" to="/Tracking">
+							Tracking
+						</Link>
+						<Link className="nav-item nav-link" to="/Contact">
+							Contact
+						</Link>
+					</div>
+				</div>
+			</nav>
+		</div>
 	);
 };
