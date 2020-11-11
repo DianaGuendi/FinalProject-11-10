@@ -16,11 +16,22 @@
 */
 .navbar {
     background-color: rgb(1, 46, 107);
+    height: 100px;
+    margin-block-end: auto;
+
+#navbarNavAltMarkup {
+margin-block-start: auto;
+}
+.Carousel-home {
+    margin-top: 396px;
+    margin-left: auto;
+    margin-right: auto;
+}
     
 }
- .navbar-brand #logo {
-    width: 100px;
-    height: 100px;
+ #logo {
+    width: 105px;
+    height: auto;
 }
 .navbar-brand {
     color:whitesmoke;
