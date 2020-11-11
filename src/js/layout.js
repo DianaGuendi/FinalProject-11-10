@@ -12,7 +12,7 @@ import { Tracking } from "./views/Tracking";
 
 // import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+import { Footer } from "./component/Footer";
 import { MainBody } from "./component/MainBody";
 
 //create your first component

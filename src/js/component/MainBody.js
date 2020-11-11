@@ -9,8 +9,7 @@ export function MainBody() {
 			<div className="row">
 				<div className="col-sm">
 					<Card
-						myPicture={rigobaby}
-						// "https://images.pexels.com/photos/3999659/pexels-photo-3999659.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+						myPicture="https://images.pexels.com/photos/3999659/pexels-photo-3999659.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
 						myTittle="Air Transportation"
 					/>
 				</div>

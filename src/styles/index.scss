@@ -43,11 +43,29 @@
     text-align: center;
 }
 
+.footer {
+color: white;
+background-color: rgb(1, 46, 107);
+}
+.card-info {
+    margin-bottom: auto;
+    font-size: 13px;
+}
+.address  {
+display: flex;
+}
+.phones {
+display: flex;
+}
+
+.email{
+display: flex;
+}
 
 .copyrights {
 
 color: white;
-background-color: #343a40 !important;
+background-color: rgb(1, 46, 107);
 text-align: center;
 height: 50px;
 }
