@@ -11,7 +11,7 @@ import { Services } from "./views/Services";
 import { Tracking } from "./views/Tracking";
 
 // import injectContext from "./store/appContext";
-import { Navbar } from "./component/navbar";
+import { Navbart } from "./component/navbar";
 import { Footer } from "./component/Footer";
 import { MainBody } from "./component/MainBody";
 
@@ -25,7 +25,7 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				{/* <ScrollToTop> */}
-				<Navbar />
+				<Navbart />
 				<Switch>
 					<Route exact path="/">
 						<Home />
