@@ -22,15 +22,13 @@
 #navbarNavAltMarkup {
 margin-block-start: auto;
 }
-.Carousel-home {
-    margin-top: 396px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+
     
 }
  #logo {
-    width: 105px;
+     margin-top: -8px;
+    width: 104px;
     height: auto;
 }
 .navbar-brand {
@@ -44,11 +42,6 @@ margin-block-start: auto;
     margin-top: 187px;
 
 }
-.titleAbout{
-    margin-top:187px;
-}
-
-    
 
 .card-title {
     text-align: center;
@@ -76,9 +69,10 @@ display: flex;
 .copyrights {
 
 color: white;
-background-color: rgb(1, 46, 107);
+background-color: rgb(25, 32, 43);
 text-align: center;
-height: 50px;
+font-size: 15px;
+
 }
 .copyrights h1{
     font-size: 15px;

@@ -4,7 +4,7 @@ import mitlog from "../../img/mit.jpg";
 
 export const Navbar = () => {
 	return (
-		<div>
+		<div className="container navbar">
 			<nav className="navbar fixed-top mr-auto navbar-expand-lg  ">
 				<img id="logo" src={mitlog} />
 				<button
