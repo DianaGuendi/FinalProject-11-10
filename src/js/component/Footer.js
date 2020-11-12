@@ -35,7 +35,7 @@ export function Footer() {
 					</div>
 				</div>
 			</div>
-			<div className="copyrights">
+			<div id="copyr" className="copyrights row">
 				<footer>M.I.T Logistics INC © Copyright All rights reserved 2020</footer>
 			</div>
 		</div>
