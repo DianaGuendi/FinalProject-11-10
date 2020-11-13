@@ -14,26 +14,17 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-.navbar {
-    background-color: rgb(1, 46, 107);
-    
-    margin-block-end: auto;
 
-.Dropdown {
-    background-color: black;
+
+#responsive-navbar-nav {
+padding-right: 30px;
 }
 
-#navbarNavAltMarkup {
-margin-block-start: auto;
-}
-
-
-    
-}
- #logo {
-     margin-top: -8px;
+#logo {
+     margin-top: 0px;
     width: 104px;
     height: auto;
+    padding-left: 30px;
 }
 .navbar-brand {
     color:whitesmoke;
@@ -45,6 +36,9 @@ margin-block-start: auto;
 .jumbotron {
     margin-top: 187px;
 
+}
+.image-about {
+    float: left;
 }
 
 .card-title {

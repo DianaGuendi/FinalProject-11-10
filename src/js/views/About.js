@@ -2,39 +2,36 @@ import React from "react";
 
 export function About() {
 	return (
-		<div classNameName="titleAbout">
-			{/* <h1> This is about pageeeeiie </h1>
-			<p> New View</p> */}
+		<div>
+			<div className="container marketing">
+				{/* <!-- START THE FEATURETTES --> */}
 
-			<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-				<ol className="carousel-indicators">
-					<li data-target="#carouselExampleIndicators" data-slide-to="0" className="active" />
-					<li data-target="#carouselExampleIndicators" data-slide-to="1" />
-					<li data-target="#carouselExampleIndicators" data-slide-to="2" />
-				</ol>
-				<div className="carousel-inner">
-					<div className="carousel-item active">
-						<img className="d-block w-100" src="https://placeimg.com/1080/500/animals" alt="First slide" />
-						<div className="carousel-caption d-none d-md-block">
-							<h5>My Caption Title (1st Image)</h5>
-							<p>The whole caption will only show up if the screen is at least medium size.</p>
+				<hr className="featurette-divider" />
+
+				<div className="main-cont col-10">
+					<div className="row featurette">
+						<div className="col-sm-7">
+							<br />
+
+							<h2 className="featurette-heading">About Us</h2>
+							<p className="lead">
+								At MIT Logistics INC, the client is our best need. We use our network to help customers
+								manage their goods most efficiently throughout their supply chains. At the top of our
+								value proposition is an intense customer service culture that connects our team
+								worldwide. Our people focus on finding new ways to help our customers succeed, while
+								becoming continuously more efficient ourselves.{" "}
+							</p>
+						</div>
+						<div className="col-sm-5">
+							<img
+								className="image-about"
+								src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+								alt="Girl in a jacket"
+							/>
 						</div>
 					</div>
-					<div className="carousel-item">
-						<img className="d-block w-100" src="https://placeimg.com/1080/500/arch" alt="Second slide" />
-					</div>
-					<div className="carousel-item">
-						<img className="d-block w-100" src="https://placeimg.com/1080/500/nature" alt="Third slide" />
-					</div>
 				</div>
-				<a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-					<span className="carousel-control-prev-icon" aria-hidden="true" />
-					<span className="sr-only">Previous</span>
-				</a>
-				<a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-					<span className="carousel-control-next-icon" aria-hidden="true" />
-					<span className="sr-only">Next</span>
-				</a>
+				<hr className="featurette-divider" />
 			</div>
 		</div>
 	);
