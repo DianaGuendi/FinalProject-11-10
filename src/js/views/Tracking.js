@@ -3,46 +3,156 @@ import { Carousel } from "react-bootstrap";
 
 export function Tracking() {
 	return (
-		<div className="carousel-container">
-			<div className="row-3" />
-			<div className="jumbotron row-6">
-				<Carousel>
-					<Carousel.Item interval={1000}>
-						<img
-							className="d-block w-90 center"
-							src="https://images.pexels.com/photos/3999659/pexels-photo-3999659.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-							alt="First slide"
-						/>
-						<Carousel.Caption>
-							<h3>First slide label</h3>
-							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item interval={500}>
-						<img
-							className="d-block w-90"
-							src="https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-							alt="Third slide"
-						/>
-						<Carousel.Caption>
-							<h3>Second slide label</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							className="d-block w-90"
-							src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-							alt="Third slide"
-						/>
-						<Carousel.Caption>
-							<h3>Third slide label</h3>
-							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-						</Carousel.Caption>
-					</Carousel.Item>
-				</Carousel>
+		<div className="tracking-container">
+			<hr className="tracking-divider" />
+			<div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+				<h1 className="display-4">Track Your Cargo</h1>
 			</div>
-			<div className="row-3" />
+			<div className="container-main row">
+				<div className="container-airlines col-7">
+					<div className="buttons">
+						<div className="card-tracking text-center col-sm">
+							<div className="card-body">
+								<h5 className="card-title">Latam Cargo</h5>
+								<a
+									href="https://www.latamcargo.com/en/e-tracking"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="btn btn-primary">
+									Track
+								</a>
+							</div>
+						</div>
+						<div className="card-tracking text-center col-sm">
+							<div className="card-body">
+								<h5 className="card-title">Tampa Cargo</h5>
+
+								<a
+									href="http://www.aviancacargo.com/index.aspx"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="btn btn-primary">
+									Track
+								</a>
+							</div>
+						</div>
+						<div className="card-tracking text-center col-sm">
+							<div className="card-body">
+								<h5 className="card-title">TC Cargo</h5>
+
+								<a
+									href="http://transcaribbean.cargolink.aero/cargolinktracking/"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="btn btn-primary">
+									Track
+								</a>
+							</div>
+						</div>
+						<div className="card-tracking text-center col-sm">
+							<div className="card-body">
+								<h5 className="card-title">DHL</h5>
+
+								<a
+									href="https://www.dhl.com/content/g0/en/logistics/customer_resource_area/freight_tracking_and_applications/air_freight_tracking.html"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="btn btn-primary">
+									Track
+								</a>
+							</div>
+						</div>
+						<div className="card-tracking text-center col-sm">
+							<div className="card-body">
+								<h5 className="card-title">UPS</h5>
+
+								<a
+									href="https://aircargo.ups.com/en-US/Tracking"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="btn btn-primary">
+									Track
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="icon-title col-5">
+					<i className="fas fa-plane-departure" />
+					<p className="airline">Airlines</p>
+				</div>
+			</div>
+
+			<h1>Trucking</h1>
+			<div className="container-Trucking row">
+				<div className="card-tracking text-center col-sm">
+					<div className="card-body">
+						<h5 className="card-title">UPS Freight</h5>
+
+						<a
+							href="https://www.upsfreight.com/ltl/apps/home/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-primary">
+							Track
+						</a>
+					</div>
+				</div>
+				<div className="card-tracking text-center col-sm">
+					<div className="card-body">
+						<h5 className="card-title">R&L</h5>
+
+						<a
+							href="https://www.rlcarriers.com/freight/shipping/shipment-tracing"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-primary">
+							Track
+						</a>
+					</div>
+				</div>
+				<div className="card-tracking text-center col-sm">
+					<div className="card-body">
+						<h5 className="card-title">XPO Logistics</h5>
+
+						<a
+							href="https://app.ltl.xpo.com/appjs/tracking/search"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-primary">
+							Track
+						</a>
+					</div>
+				</div>
+				<div className="card-tracking text-center col-sm">
+					<div className="card-body">
+						<h5 className="card-title">FedEx Freight</h5>
+
+						<a
+							href="http://www.fedexfreight.fedex.com/ca_english/tracking/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-primary">
+							Track
+						</a>
+					</div>
+				</div>
+				<div className="card-tracking text-center col-sm">
+					<div className="card-body">
+						<h5 className="card-title">Central Transport</h5>
+
+						<a
+							href="http://www.centraltransportint.com/Confirm/Trace.aspx?"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn btn-primary">
+							Track
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<hr className="tracking-divider" />
 		</div>
 	);
 }

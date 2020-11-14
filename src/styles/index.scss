@@ -17,14 +17,14 @@
 
 
 #responsive-navbar-nav {
-padding-right: 30px;
+padding-right: 50px;
 }
 
 #logo {
-     margin-top: 0px;
-    width: 104px;
+    margin-top: 0px;
+    width: 105px;
     height: auto;
-    padding-left: 30px;
+    margin-left:  50px;
 }
 .navbar-brand {
     color:whitesmoke;
@@ -33,12 +33,18 @@ padding-right: 30px;
     color:whitesmoke;
 }
 
-.jumbotron {
-    margin-top: 187px;
 
+
+.featurette-divider {
+    margin-top: 9rem;
+    
 }
+
 .image-about {
-    float: left;
+    max-width: 500px;
+    max-height: auto;
+
+
 }
 
 .card-title {
@@ -47,7 +53,7 @@ padding-right: 30px;
 
 .footer {
 color: white;
-background-color: rgb(1, 46, 107);
+background-color: rgb(57, 61, 65);
 }
 .card-info {
     margin-bottom: auto;
@@ -67,12 +73,50 @@ display: flex;
 .copyrights {
 
 color: white;
-background-color: rgb(25, 32, 43);
-text-align: center;
+background-color: rgb(57, 61, 65);
+justify-content: center;
 font-size: 15px;
 
 }
 .copyrights h1{
     font-size: 15px;
     padding: 12px;
+}
+
+// tracking style
+.card-body {
+    padding: 0px;
+}
+.container-main {
+    height: 500px;
+    width: auto;
+}
+.container-airlines {
+    display: flex;
+    background-image: url("https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.icon-title {
+    align-self: center;
+    text-align: center;
+}
+.fa-plane-departure {
+    font-size: 10vw;
+    color: rgb(28, 40, 73)
+}
+.airline {
+    font-size: 10vw;
+    color: rgb(28, 40, 73)
+}
+
+.card-tracking{
+    margin: 5px;
+    background-color: rgba(239, 239, 241, 0.37);
+    max-width: auto;
+    max-height: 100px;
+    align-items: center;
+    padding: 0px;
 }
