@@ -2,13 +2,13 @@ import React from "react";
 
 export function About() {
 	return (
-		<div>
+		<div className="about-text">
 			<div className="container marketing">
 				{/* <!-- START THE FEATURETTES --> */}
 
 				<hr className="featurette-divider" />
 
-				<div className="main-cont col-10">
+				<div className="main-cont col-12">
 					<div className="row featurette">
 						<div className="col-sm-7">
 							<br />
@@ -24,7 +24,7 @@ export function About() {
 						</div>
 						<div className="col-sm-5">
 							<img
-								className="image-about"
+								className="container-fluid"
 								src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 								alt="Girl in a jacket"
 							/>
