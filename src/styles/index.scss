@@ -37,6 +37,7 @@ padding-right: 50px;
 
 .featurette-divider {
     margin-top: 9rem;
+    background-color: orangered;
     
 }
 
@@ -54,6 +55,7 @@ padding-right: 50px;
 .footer {
 color: white;
 background-color: rgb(57, 61, 65);
+padding-top: 15px;
 }
 .card-info {
     margin-bottom: auto;
@@ -83,7 +85,6 @@ font-size: 15px;
     padding: 12px;
 }
 
-<<<<<<< HEAD
 .nphones{
     color: coral;
 }
@@ -97,22 +98,37 @@ font-size: 15px;
     font-size: 100px
 }
 .fa-warehouse{
-    font-size: 100px
-=======
+    font-size: 100px;
+}
+
 // tracking style
 .card-body {
     padding: 0px;
 }
 .container-main {
-    height: 500px;
+    height: 440px;
     width: auto;
+    padding-left: 100px;
 }
 .container-airlines {
     display: flex;
     background-image: url("https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     align-items: center;
+    
+    
+    
+}
+.container-trucking {
+    display: flex;
+    background-image: url("https://images.pexels.com/photos/2800121/pexels-photo-2800121.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+  
+   
+   
 }
 
 .icon-title {
@@ -120,14 +136,23 @@ font-size: 15px;
     text-align: center;
 }
 .fa-plane-departure {
-    font-size: 10vw;
+    font-size: 7vw;
     color: rgb(28, 40, 73)
 }
 .airline {
-    font-size: 10vw;
+    font-size: 7vw;
     color: rgb(28, 40, 73)
 }
 
+.fa-truck-moving {
+    font-size: 7vw;
+    color: rgb(28, 40, 73)
+}
+.trucking {
+    font-size: 7vw;
+    color: rgb(28, 40, 73)
+
+}
 .card-tracking{
     margin: 5px;
     background-color: rgba(239, 239, 241, 0.37);
@@ -135,5 +160,7 @@ font-size: 15px;
     max-height: 100px;
     align-items: center;
     padding: 0px;
->>>>>>> 4796c92bc58d6e94d4db10d11e7b266cb5ed8545
+}
+.tracking-divider {
+    background-color: orangered;
 }
