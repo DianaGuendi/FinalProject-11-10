@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import mitlog from "../../img/mit.jpg";
+import mitlog from "../../img/mit1.png";
 import { NavDropdown, Nav, Navbar } from "react-bootstrap";
 import { Modal, Button, InputGroup, FormControl } from "react-bootstrap";
 
