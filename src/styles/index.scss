@@ -14,20 +14,39 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-
-
+.info-conten {
+    display: flex;
+}
 #responsive-navbar-nav {
 padding-right: 50px;
 }
+#navlink {
+    color: rgb(1, 46, 107);
+}
 .login-but {
     float: right;
+    
+    
+}
+.login-button {
+    background-color: rgb(1, 46, 107);
 }
 
 #logo {
     margin-top: 0px;
     width: 105px;
     height: auto;
-    margin-left:  50px;
+   
+}
+@media screen and (max-width: 768px) {
+  .info-nav {
+    visibility: hidden;
+    // clear: both;
+    // float: left;
+    // margin: 10px auto 5px 20px;
+    // width: 28%;
+    // display: none;
+  }
 }
 .navbar-brand {
     color:whitesmoke;
@@ -40,7 +59,7 @@ padding-right: 50px;
 
 .featurette-divider {
     margin-top: 9rem;
-    background-color: orangered;
+    background-color: rgb(237, 81, 27);
     
 }
 
@@ -89,22 +108,25 @@ font-size: 15px;
 }
 
 .nphones{
-    color: coral;
+    color: rgb(237, 81, 27);
 }
-.fa-plane-departure{
-    font-size: 100px
-}
+
+
 .fa-ship{
-    font-size: 100px
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
 }
-.fa-truck-moving{
-    font-size: 100px
-}
+
+
 .fa-warehouse{
-    font-size: 100px;
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
 }
 
 // tracking style
+.display-4 {
+    color: rgb(1, 46, 107);
+}
 .card-body {
     padding: 0px;
 }
@@ -139,21 +161,21 @@ font-size: 15px;
     text-align: center;
 }
 .fa-plane-departure {
-    font-size: 7vw;
-    color: rgb(28, 40, 73)
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
 }
 .airline {
-    font-size: 7vw;
-    color: rgb(28, 40, 73)
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
 }
 
 .fa-truck-moving {
     font-size: 7vw;
-    color: rgb(28, 40, 73)
+    color: rgb(1, 46, 107);
 }
 .trucking {
     font-size: 7vw;
-    color: rgb(28, 40, 73)
+    color: rgb(1, 46, 107);
 
 }
 .card-tracking{
@@ -165,5 +187,5 @@ font-size: 15px;
     padding: 0px;
 }
 .tracking-divider {
-    background-color: orangered;
+   background-color: rgb(237, 81, 27);
 }
