@@ -17,35 +17,52 @@
 
 
 #navlink {
-    color: rgb(1, 46, 107);
+    color: whitesmoke;
 }
-.login-but {
-    float: right; 
-    padding-right: 30px;
-    margin-top: 30px;
+.navbar-light .navbar-toggler {
+    border-color: rgb(237, 81, 27);
+    color:rgb(237, 81, 27);
+    background-color: lightgrey;
 }
+
 .login-button {
     background-color: rgb(1, 46, 107);
 }
-.logomit{
-    padding: 30px;
+.logoinfolog{
+    padding: 2rem;
 }
+.logomit {
+    text-align: center;
+}
+
 #logo {
    
     width: 105px;
     height: auto;
    
 }
-// @media screen and (max-width: 768px) {
-//   .info-nav {
-//     visibility: hidden;
-    // clear: both;
-    // float: left;
-    // margin: 10px auto 5px 20px;
-    // width: 28%;
-    // display: none;
-//   }
+// .info-nav{
+//     padding-left: 215px;
 // }
+@media screen and (max-width: 425px) {
+  .info-nav {
+    visibility: hidden;
+    
+  }
+}
+.navbar-alig {
+    justify-content: center;
+    display: flex;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+}
+.navbar-alig {
+    background-color: rgb(1, 46, 107);
+}
+
 .navbar-brand {
     color:whitesmoke;
 }
