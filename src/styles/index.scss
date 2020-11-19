@@ -14,40 +14,38 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-.info-conten {
-    display: flex;
-}
-#responsive-navbar-nav {
-padding-right: 50px;
-}
+
+
 #navlink {
     color: rgb(1, 46, 107);
 }
 .login-but {
-    float: right;
-    
-    
+    float: right; 
+    padding-right: 30px;
+    margin-top: 30px;
 }
 .login-button {
     background-color: rgb(1, 46, 107);
 }
-
+.logomit{
+    padding: 30px;
+}
 #logo {
-    margin-top: 0px;
+   
     width: 105px;
     height: auto;
    
 }
-@media screen and (max-width: 768px) {
-  .info-nav {
-    visibility: hidden;
+// @media screen and (max-width: 768px) {
+//   .info-nav {
+//     visibility: hidden;
     // clear: both;
     // float: left;
     // margin: 10px auto 5px 20px;
     // width: 28%;
     // display: none;
-  }
-}
+//   }
+// }
 .navbar-brand {
     color:whitesmoke;
 }
