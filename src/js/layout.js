@@ -5,7 +5,6 @@ import injectContext from "./store/appContext";
 import PropTypes from "prop-types";
 
 import { About } from "./views/About";
-import { Contact } from "./views/Contact";
 import { Home } from "./views/home";
 import { Services } from "./views/Services";
 import { Tracking } from "./views/Tracking";
@@ -14,6 +13,7 @@ import { Tracking } from "./views/Tracking";
 import { Navbart } from "./component/navbar";
 import { Footer } from "./component/Footer";
 import { MainBody } from "./component/MainBody";
+import { Quotes } from "./views/Quotes";
 
 //create your first component
 const Layout = () => {
@@ -39,8 +39,8 @@ const Layout = () => {
 					<Route path="/Tracking">
 						<Tracking />
 					</Route>
-					<Route path="/Contact">
-						<Contact />
+					<Route path="/Quotes">
+						<Quotes />
 					</Route>
 				</Switch>
 				<Footer />

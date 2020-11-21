@@ -72,6 +72,9 @@ export const Navbart = () => {
 							<Nav.Link id="navlink" href="/Tracking">
 								Tracking
 							</Nav.Link>
+							<Nav.Link id="navlink" href="/Quotes">
+								Quotes
+							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
