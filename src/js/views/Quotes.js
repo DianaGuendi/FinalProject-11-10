@@ -1,5 +1,7 @@
 import React from "react";
 import { Modal, Button, InputGroup, FormControl, Form, Col } from "react-bootstrap";
+import { QuoteCard } from "../component/QuoteCard";
+import { QuotesList } from "../component/QuotesList";
 
 export function Quotes() {
 	return (
@@ -135,6 +137,9 @@ export function Quotes() {
 				</Form>
 			</div>
 			<hr className="featurette-divider" />
+			<div className="quotelist">
+				<QuotesList />
+			</div>
 		</div>
 	);
 }
