@@ -14,6 +14,7 @@ import { Navbart } from "./component/navbar";
 import { Footer } from "./component/Footer";
 import { MainBody } from "./component/MainBody";
 import { Quotes } from "./views/Quotes";
+import { Profile } from "./views/Profile";
 
 //create your first component
 const Layout = () => {
@@ -41,6 +42,9 @@ const Layout = () => {
 					</Route>
 					<Route path="/Quotes">
 						<Quotes />
+					</Route>
+					<Route path="/Profile/:id">
+						<Profile />
 					</Route>
 				</Switch>
 				<Footer />
