@@ -1,17 +1,12 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import mit from "../../img/mit.jpg";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export function UserCard(props) {
-	let registerBtn = "Register User";
-	let btnClass = "btn-success";
-	if (props.student.registered == true) {
-		registerBtn = "Unregister User";
-		btnClass = "btn-danger";
-	}
-
-	console.log(props.student);
+	const { store, actions } = useContext(Context);
+	let quotes = actions.getQuotes();
 
 	return (
 		<div className="card mb-3">
@@ -21,24 +16,20 @@ export function UserCard(props) {
 						<img src={mit} className="card-img" alt="..." />
 					</div>{" "}
 					<div className="card-body" />
-					<h5 className="card-title">{props.student.name}</h5>
+					<h5 className="card-title">User Name: {props.student.name}</h5>
 					<p className="card-text">
 						Student ID:
-						{props.index}
+						{props.student.id}
 					</p>
-					<p className="card-text" style={{ color: props.student.registered ? "green" : "red" }}>
-						Registered:
-						{props.student.registered.toString()}
+					<p className="card-text">
+						Quotes:
+						{quotes[props.student.companyID - 1].zipcode}
 					</p>
-					<button className={"btn " + btnClass} onClick={() => props.register(props.index)}>
-						{registerBtn}
-					</button>
 					<Link
 						className="btn btn-info"
 						// to={`/Profile/${props.index}`}
 						to={{
-							pathname: "/Profile/" + props.index,
-							student: props.student
+							pathname: "/Profile/" + props.student.id
 						}}>
 						View Profile
 					</Link>
@@ -49,8 +40,5 @@ export function UserCard(props) {
 }
 UserCard.propTypes = {
 	index: PropTypes.number,
-	// name: PropTypes.string,
-	// registered: PropTypes.bool,
-	register: PropTypes.func,
 	student: PropTypes.object
 };

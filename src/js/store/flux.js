@@ -1,42 +1,93 @@
+import { array } from "prop-types";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			students: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					id: 1,
+					name: "Daniel",
+					companyID: 1
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					id: 2,
+					name: "Andres",
+					companyID: 2
+				},
+				{
+					id: 3,
+					name: "Diana",
+					companyID: 3
+				}
+			],
+			quotes: [
+				{
+					id: 1,
+					Length: 48,
+					Width: 40,
+					Height: 50,
+					Weight: 500,
+					Address: "8621 NW 15th St",
+					City: "Pembroke Pines",
+					state: "Florida",
+					zipcode: 33024
+				},
+				{
+					id: 2,
+					Length: 48,
+					Width: 40,
+					Height: 60,
+					Weight: 800,
+					Address: "13022 SW 88th terr",
+					City: "Miami",
+					state: "Florida",
+					zipcode: 33186
+				},
+				{
+					id: 3,
+					Length: 48,
+					Width: 40,
+					Height: 46,
+					Weight: 300,
+					Address: "12015 Main street ",
+					City: "Greenville ",
+					state: "South Carolina",
+					zipcode: 29614
 				}
 			]
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			getStudents: () => {
+				return getStore().students;
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+			getStudent: id => {
+				const students = getStore().students;
+				id = parseInt(id);
+				let student = {};
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
+				students.forEach(element => {
+					if (id == element.id) {
+						student = element;
+					}
 				});
 
-				//reset the global store
-				setStore({ demo: demo });
+				return student;
+			},
+			getQuotes: () => {
+				return getStore().quotes;
+			},
+			getQuote: id => {
+				const quotes = getStore().quotes;
+				id = parseInt(id);
+				let quote = {};
+
+				quotes.forEach(element => {
+					if (id == element.id) {
+						quote = element;
+					}
+				});
+
+				return quote;
 			}
 		}
 	};

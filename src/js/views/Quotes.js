@@ -140,9 +140,6 @@ export function Quotes() {
 				</Form>
 			</div>
 			<hr className="featurette-divider" />
-			<div className="quotelist">
-				<QuotesList />
-			</div>
 		</div>
 	);
 }
