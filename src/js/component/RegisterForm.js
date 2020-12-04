@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
 export function RegisterForm(props) {
-	const [value, setValue] = useState("");
+	const [name, setName] = useState("");
+	const [course, setCourse] = useState("");
+
+	const { store, actions } = useContext(Context);
+
 	let handleSubmit = e => {
 		e.preventDefault();
-		if (!value) {
-			alert("form cannot be empty");
-			return;
-		}
-		console.log(value);
-		props.addStudent(value);
-		setValue("");
+		// if (!value) {
+		// 	alert("form cannot be empty");
+		// 	return;
+		// }
+		actions.addStudent(name, course);
+
+		// props.addStudent(value);
+		setName("");
+		serCourse("");
 	};
 	return (
 		<div>
@@ -20,14 +27,21 @@ export function RegisterForm(props) {
 				<input
 					type="text"
 					className="input"
-					value={value}
+					value={name}
 					placeholder="User Name"
-					onChange={e => setValue(e.target.value)}
+					required
+					onChange={e => setName(e.target.value)}
 				/>
+				<input
+					type="number"
+					className="input"
+					value={course}
+					placeholder="CompanyID"
+					required
+					onChange={e => setCourse(e.target.value)}
+				/>
+				<input type="submit" value="Submit" />
 			</form>
 		</div>
 	);
 }
-RegisterForm.propTypes = {
-	addStudent: PropTypes.func
-};

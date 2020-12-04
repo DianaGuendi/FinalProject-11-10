@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { UserCard } from "./UserCard.js";
-// import { RegisterForm } from "./RegisterForm.js";
+import { RegisterForm } from "./RegisterForm.js";
 import { Context } from "../store/appContext";
 
 export function UserList() {
@@ -30,7 +30,7 @@ export function UserList() {
 	return (
 		<div>
 			<div className="row">
-				{/* <RegisterForm addStudent={AddStudent} /> */}
+				<RegisterForm />
 				<p>Register fom will go here</p>
 			</div>
 			{test}

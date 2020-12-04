@@ -73,6 +73,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				return student;
 			},
+			addStudent: (name, course) => {
+				console.log(name, course);
+				const store = getStore();
+				let slength = store.students.length;
+				let lastID = store.students[slength - 1].id;
+
+				let newStudent = { id: lastID + 1, name: name, companyID: course };
+				const newList = [...store.students, newStudent];
+				setStore(newList, store.quotes);
+				console.log(store);
+			},
 			getQuotes: () => {
 				return getStore().quotes;
 			},
