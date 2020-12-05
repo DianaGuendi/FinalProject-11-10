@@ -23,7 +23,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			quotes: [
 				{
 					id: 1,
-					Length: 48,
+					userId: 1,
+					cLength: 48,
 					Width: 40,
 					Height: 50,
 					Weight: 500,
@@ -34,7 +35,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					id: 2,
-					Length: 48,
+					userId: 1,
+					cLength: 48,
 					Width: 40,
 					Height: 60,
 					Weight: 800,
@@ -45,7 +47,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					id: 3,
-					Length: 48,
+					userId: 2,
+					cLength: 48,
 					Width: 40,
 					Height: 46,
 					Weight: 300,
@@ -80,10 +83,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let lastID = store.students[slength - 1].id;
 
 				let newStudent = { id: lastID + 1, name: name, companyID: course };
-				const newList = [...store.students, newStudent];
-				setStore(newList, store.quotes);
+				store.students = [...store.students, newStudent];
+				setStore(store);
 				console.log(store);
 			},
+
 			getQuotes: () => {
 				return getStore().quotes;
 			},
@@ -99,6 +103,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 
 				return quote;
+			},
+			getQuotesByUser: id => {
+				const quotes = getStore().quotes;
+				id = parseInt(id);
+				let quote = {};
+				let userQuotes = [];
+
+				quotes.forEach(element => {
+					if (id == element.userId) {
+						quote = element;
+						userQuotes.push(quote);
+					}
+				});
+
+				return userQuotes;
+			},
+			addQuote: (cLength, Width, Heigth, Weight, Address, City, state, zipcode) => {
+				console.log(cLength, Width, Heigth, Weight, Address, City, state, zipcode);
+				const store = getStore();
+				let hlength = store.quotes.length;
+				let lastID = store.quotes[hlength - 1].id;
+
+				let newQuotes = {
+					id: lastID + 1,
+					cLength: cLength,
+					Width: Width,
+					Heigth: Heigth,
+					Weight: Weight,
+					Address: Address,
+					City: City,
+					state: state,
+					zipcode: zipcode
+				};
+				store.quotes = [...store.quotes, newQuotes];
+				setStore(store);
+				console.log(store);
 			}
 		}
 	};

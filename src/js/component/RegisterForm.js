@@ -18,7 +18,7 @@ export function RegisterForm(props) {
 
 		// props.addStudent(value);
 		setName("");
-		serCourse("");
+		setCourse("");
 	};
 	return (
 		<div>

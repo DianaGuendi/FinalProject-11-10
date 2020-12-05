@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
 export function QuoteCard(props) {
+	const { store, actions } = useContext(Context);
+	let quotes = actions.getQuotes();
+
 	return (
 		<div className="card border-dark col-12">
 			<div className="card-header">
@@ -12,33 +16,34 @@ export function QuoteCard(props) {
 				<div className="quotes row">
 					<h1 className="card-titleQ col-3">
 						Length:
-						{props.Length}
+						{props.quotes.cLength}
 					</h1>
 					<h1 className="card-titleQ col-3">
 						Width:
-						{props.Width}
+						{props.quotes.Width}
 					</h1>
 					<h1 className="card-titleQ col-3">
 						Height:
-						{props.Height}
+						{props.quotes.Height}
 					</h1>
 					<h1 className="card-titleQ col-3">
 						Weight:
-						{props.Weight}
+						{props.quotes.Weight}
 					</h1>
 				</div>
 
 				<div className="quotes row">
-					<h1 className="card-titleQ col-3">{props.Address}</h1>
-					<h1 className="card-titleQ col-3">{props.City}</h1>
-					<h1 className="card-titleQ col-3">{props.state}</h1>
-					<h1 className="card-titleQ col-3">{props.zipcode}</h1>
+					<h1 className="card-titleQ col-3">{props.quotes.Address}</h1>
+					<h1 className="card-titleQ col-3">{props.quotes.City}</h1>
+					<h1 className="card-titleQ col-3">{props.quotes.state}</h1>
+					<h1 className="card-titleQ col-3">{props.quotes.zipcode}</h1>
 				</div>
 			</div>
 		</div>
 	);
 }
 QuoteCard.propTypes = {
+	student: PropTypes.object,
 	index: PropTypes.number,
 	zipcode: PropTypes.number,
 	Length: PropTypes.number,
@@ -47,6 +52,6 @@ QuoteCard.propTypes = {
 	Weight: PropTypes.number,
 	Address: PropTypes.string,
 	City: PropTypes.string,
-	state: PropTypes.string
+	state: PropTypes.string,
+	quotes: PropTypes.object
 };
-export default QuoteCard;

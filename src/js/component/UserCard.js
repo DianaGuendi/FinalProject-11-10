@@ -18,12 +18,14 @@ export function UserCard(props) {
 					<div className="card-body" />
 					<h5 className="card-title">User Name: {props.student.name}</h5>
 					<p className="card-text">
-						Student ID:
+						User ID:
 						{props.student.id}
 					</p>
 					<p className="card-text">
 						Quotes:
 						{quotes[props.student.companyID - 1].zipcode}
+						<br />
+						{quotes[props.student.companyID - 1].Address}
 					</p>
 					<Link
 						className="btn btn-info"
