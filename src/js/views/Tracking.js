@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Carousel } from "react-bootstrap";
+import { Context } from "../store/appContext";
 
 export function Tracking() {
+	const { store, actions } = useContext(Context);
+
 	return (
 		<div className="tracking-container">
 			<hr className="tracking-divider" />
@@ -163,6 +166,10 @@ export function Tracking() {
 			</div>
 
 			<hr className="tracking-divider" />
+
+			<div>
+				<p>{store.tracking}</p>
+			</div>
 		</div>
 	);
 }

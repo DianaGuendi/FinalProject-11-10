@@ -57,7 +57,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					state: "South Carolina",
 					zipcode: 29614
 				}
-			]
+			],
+			tracking: []
 		},
 		actions: {
 			getStudents: () => {
@@ -119,8 +120,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				return userQuotes;
 			},
-			addQuote: (cLength, Width, Heigth, Weight, Address, City, state, zipcode) => {
-				console.log(cLength, Width, Heigth, Weight, Address, City, state, zipcode);
+			loadSomeData: () => {
+				fetch("")
+					.then(response => {
+						if (response.status === 200) {
+							return response.jason();
+						}
+					})
+					.then(jsonResponse => {
+						console.log(jsonResponse);
+						getStore().tracking.push(jsonResponse);
+					})
+					.catch(error => {
+						console.log(error);
+					});
+			},
+
+			addQuote: (cLength, Width, Heigth, Weight, Address, City, state, zipcode, userId) => {
+				console.log(cLength, Width, Heigth, Weight, Address, City, state, zipcode, userId);
 				const store = getStore();
 				let hlength = store.quotes.length;
 				let lastID = store.quotes[hlength - 1].id;
@@ -134,7 +151,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					Address: Address,
 					City: City,
 					state: state,
-					zipcode: zipcode
+					zipcode: zipcode,
+					userId: userId
 				};
 				store.quotes = [...store.quotes, newQuotes];
 				setStore(store);
