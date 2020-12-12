@@ -5,8 +5,39 @@
         <meta charset="UTF-8">
         <title>MIT LOGISTICS INC</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+         <div class="container">
+            <input id="txtEmail" type="email" placeholder="Email">
+            <input id="txtPassword" type="password" placeholder="Password">
+            <button id = "btnLogin" class="btn btn-action">Login</button>
+            <button id = "btnSignUp" class="btn btn-secondary">Signup</button>
+            <button id = "btnLogout" class="btn btn-action hide">Logout</button>
+        </div>
+
     </head>
     <body class="h-100">
         <div id="app" class="h-100"></div>
+        
+       <!-- code for firebase -->
+       
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+        <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDdPtS0jCF4pXc5ep0kakdVv135Y9kh5wQ",
+            authDomain: "login-e2e9d.firebaseapp.com",
+            projectId: "login-e2e9d",
+            storageBucket: "login-e2e9d.appspot.com",
+            messagingSenderId: "1003072184060",
+            appId: "1:1003072184060:web:7a9ac014168c984eb74179"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        db.settings({timestampInSnapshots: true});
+
+        </script>
+
     </body>
 </html>

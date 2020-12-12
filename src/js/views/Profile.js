@@ -6,6 +6,7 @@ import { object } from "prop-types";
 
 export function Profile() {
 	const { store, actions } = useContext(Context);
+	console.log(store);
 	let params = useParams();
 	let history = useHistory();
 	let student = actions.getStudent(params.id);

@@ -21,6 +21,10 @@ const injectContext = PassedComponent => {
 			})
 		);
 
+		// TESTING FOR USER
+		// const [currentUser, setCurrentUser] = useState(null);
+		// const [pending, setPending] = useState(true);
+
 		useEffect(() => {
 			/**
 			 * EDIT THIS!
@@ -31,6 +35,11 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
 			 *
 			 **/
+			//CHECK IF THERE IS A FIREBASE USER
+			firebase.auth().onAuthStateChanged(user => {
+				state.actions.setCurrentUser(user.email);
+				// setPending(false);
+			});
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

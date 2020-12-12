@@ -54,9 +54,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					state: "South Carolina",
 					zipcode: 29614
 				}
-			]
+			],
+			currentUser: ""
 		},
 		actions: {
+			setCurrentUser: email => {
+				getStore().currentUser = email;
+			},
 			getStudents: () => {
 				return getStore().students;
 			},
