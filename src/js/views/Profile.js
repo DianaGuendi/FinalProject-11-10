@@ -3,14 +3,22 @@ import mit from "../../img/mit.jpg";
 import { useParams, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { object } from "prop-types";
+import { QuoteForm } from "../component/QuoteForm";
+import { QuoteCard } from "../component/QuoteCard";
+import PropTypes from "prop-types";
 
 export function Profile() {
 	const { store, actions } = useContext(Context);
+<<<<<<< HEAD
 	console.log(store);
+=======
+
+>>>>>>> 8993713b4ef7b35d85e862a9e21d19f800b2c8a0
 	let params = useParams();
 	let history = useHistory();
 	let student = actions.getStudent(params.id);
-	let quote = actions.getQuote(student.companyID);
+	// let quote = actions.getQuote(student.companyID);
+	let userQuotes = actions.getQuotesByUser(params.id);
 	console.log(student);
 	let content = "User not found";
 	if (Object.keys(student).length !== 0) {
@@ -18,10 +26,20 @@ export function Profile() {
 			<div>
 				<h3>User Name: {student.name}</h3>
 				<p> User Id: {student.id}</p>
-				<p>Quotes: {quote.Address}</p>
+				{/* <p>Quotes: {quote.Address}</p> */}
 				<button onClick={() => history.goBack()}>Go back</button>
 			</div>
 		);
 	}
-	return <div>{content}</div>;
+	return (
+		<div>
+			{content}
+
+			<QuoteForm />
+			{/* <QuoteCard quotes={store.quotes[0]} /> */}
+			{userQuotes.map((quote, index) => (
+				<QuoteCard key={index} quotes={quote} />
+			))}
+		</div>
+	);
 }
