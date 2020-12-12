@@ -5,15 +5,16 @@ import injectContext from "./store/appContext";
 import PropTypes from "prop-types";
 
 import { About } from "./views/About";
-import { Contact } from "./views/Contact";
 import { Home } from "./views/home";
 import { Services } from "./views/Services";
 import { Tracking } from "./views/Tracking";
 
 // import injectContext from "./store/appContext";
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+import { Navbart } from "./component/navbar";
+import { Footer } from "./component/Footer";
 import { MainBody } from "./component/MainBody";
+import { Quotes } from "./views/Quotes";
+import { Profile } from "./views/Profile";
 
 //create your first component
 const Layout = () => {
@@ -25,7 +26,7 @@ const Layout = () => {
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				{/* <ScrollToTop> */}
-				<Navbar />
+				<Navbart />
 				<Switch>
 					<Route exact path="/">
 						<Home />
@@ -39,8 +40,11 @@ const Layout = () => {
 					<Route path="/Tracking">
 						<Tracking />
 					</Route>
-					<Route path="/Contact">
-						<Contact />
+					<Route path="/Quotes">
+						<Quotes />
+					</Route>
+					<Route path="/Profile/:id">
+						<Profile />
 					</Route>
 				</Switch>
 				<Footer />

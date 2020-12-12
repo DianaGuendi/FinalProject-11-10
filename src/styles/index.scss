@@ -14,14 +14,55 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-.navbar {
+
+
+#navlink {
+    color: whitesmoke;
+}
+.navbar-light .navbar-toggler {
+    border-color: rgb(237, 81, 27);
+    color:rgb(237, 81, 27);
+    background-color: lightgrey;
+}
+
+.login-button {
     background-color: rgb(1, 46, 107);
+}
+.logoinfolog{
+    padding: 2rem;
+}
+.logomit {
+    text-align: center;
+}
+
+#logo {
+   
+    width: 105px;
+    height: auto;
+   
+}
+// .info-nav{
+//     padding-left: 215px;
+// }
+@media screen and (max-width: 425px) {
+  .info-nav {
+    visibility: hidden;
     
+  }
 }
- .navbar-brand #logo {
-    width: 100px;
-    height: 100px;
+.navbar-alig {
+    justify-content: center;
+    display: flex;
 }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+}
+.navbar-alig {
+    background-color: rgb(1, 46, 107);
+}
+
 .navbar-brand {
     color:whitesmoke;
 }
@@ -29,29 +70,200 @@
     color:whitesmoke;
 }
 
-.jumbotron {
-    margin-top: 187px;
 
-}
-.titleAbout{
-    margin-top:187px;
-}
 
+.featurette-divider {
+    margin-top: 9rem;
+    background-color: rgb(237, 81, 27);
     
+}
+
+.image-about {
+    max-width: 500px;
+    max-height: auto;
+
+
+}
 
 .card-title {
     text-align: center;
 }
 
+.footer {
+color: white;
+background-color: rgb(57, 61, 65);
+padding-top: 15px;
+}
+.card-info {
+    margin-bottom: auto;
+    font-size: 13px;
+}
+.address  {
+display: flex;
+}
+.phones {
+display: flex;
+}
+
+.email{
+display: flex;
+}
 
 .copyrights {
 
 color: white;
-background-color: #343a40 !important;
-text-align: center;
-height: 50px;
+background-color: rgb(57, 61, 65);
+justify-content: center;
+font-size: 15px;
+
 }
 .copyrights h1{
     font-size: 15px;
     padding: 12px;
+}
+
+.nphones{
+    color: rgb(237, 81, 27);
+}
+
+
+.fa-ship{
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
+}
+
+
+.fa-warehouse{
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
+}
+
+// tracking style
+.display-4 {
+    color: rgb(1, 46, 107);
+}
+.card-body {
+    padding: 0px;
+}
+.container-main {
+    height: 440px;
+    width: auto;
+    padding-left: 100px;
+}
+.container-airlines {
+    display: flex;
+    background-image: url("https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    
+    
+    
+}
+.container-trucking {
+    display: flex;
+    background-image: url("https://images.pexels.com/photos/2800121/pexels-photo-2800121.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+  
+   
+   
+}
+
+.icon-title {
+    align-self: center;
+    text-align: center;
+}
+.fa-plane-departure {
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
+}
+.airline {
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
+}
+
+.fa-truck-moving {
+    font-size: 7vw;
+    color: rgb(1, 46, 107);
+}
+.trucking {
+    font-size: 7vw;
+    color: rgb(1, 46, 107);
+
+}
+.card-tracking{
+    margin: 5px;
+    background-color: rgba(239, 239, 241, 0.37);
+    max-width: auto;
+    max-height: 100px;
+    align-items: center;
+    padding: 0px;
+}
+.tracking-divider {
+   background-color: rgb(237, 81, 27);
+}
+
+.featurette-heading{
+   
+     color:  rgb(237, 81, 27);
+      font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+   
+}
+.lead{
+     color: rgb(1, 46, 107);
+}
+
+
+
+/* Featurettes
+------------------------- */
+
+
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+// form style
+
+   .Quotes-form {
+  max-width: 800px;
+  align-self: center;
+  display: inline;
+}
+// Quotes card style
+.quotelist{
+    display: block;
+}
+
+.quotes {
+    margin: 10px;
+    
+}
+
+.card-titleQ {
+font-size: 15px;
 }

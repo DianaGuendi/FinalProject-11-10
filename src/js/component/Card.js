@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 export function Card(props) {
 	console.log(props.myPicture);
 
 	return (
 		<div className="card">
-			<img className="card-img-top" src={props.myPicture} alt="Card image cap" />
+			<i className={props.myIcon} />
 			<div className="card-body">
 				<h5 className="card-title justify center">{props.myTittle}</h5>
 				<p className="card-text">
@@ -22,6 +23,7 @@ export function Card(props) {
 }
 Card.propTypes = {
 	myTittle: PropTypes.string,
-	myPicture: PropTypes.string // this is the path of the image, not the image itself so the type is string
+	myPicture: PropTypes.string, // this is the path of the image, not the image itself so the type is string
+	myIcon: PropTypes.string
 };
 export default Card;
