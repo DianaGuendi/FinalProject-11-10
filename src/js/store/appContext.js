@@ -21,10 +21,6 @@ const injectContext = PassedComponent => {
 			})
 		);
 
-		// TESTING FOR USER
-		// const [currentUser, setCurrentUser] = useState(null);
-		// const [pending, setPending] = useState(true);
-
 		useEffect(() => {
 			/**
 			 * EDIT THIS!
@@ -37,8 +33,9 @@ const injectContext = PassedComponent => {
 			 **/
 			//CHECK IF THERE IS A FIREBASE USER
 			firebase.auth().onAuthStateChanged(user => {
-				state.actions.setCurrentUser(user.email);
-				// setPending(false);
+				if (user) {
+					state.actions.setCurrentUser(user.email);
+				}
 			});
 		}, []);
 

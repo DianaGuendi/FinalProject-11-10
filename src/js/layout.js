@@ -43,7 +43,7 @@ const Layout = () => {
 					<Route path="/Quotes">
 						<Quotes />
 					</Route>
-					<Route path="/Profile/:id">
+					<Route path="/Profile">
 						<Profile />
 					</Route>
 				</Switch>

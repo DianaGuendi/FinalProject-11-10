@@ -15,7 +15,7 @@ export const Navbart = () => {
 		const { email, password } = event.target.elements;
 		try {
 			await firebase.auth().signInWithEmailAndPassword(email.value, password.value);
-			location.replace("/");
+			location.replace("/Profile");
 		} catch (error) {
 			alert(error);
 		}

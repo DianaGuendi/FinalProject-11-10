@@ -23,7 +23,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			quotes: [
 				{
 					id: 1,
-					userId: 1,
+					userEmail: "koko@kiki.com",
 					cLength: 48,
 					Width: 40,
 					Height: 50,
@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					id: 2,
-					userId: 1,
+					userEmail: "koko@kiki.com",
 					cLength: 48,
 					Width: 40,
 					Height: 60,
@@ -47,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					id: 3,
-					userId: 2,
+					userEmail: "koo@kiki.com",
 					cLength: 48,
 					Width: 40,
 					Height: 46,
@@ -58,15 +58,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					zipcode: 29614
 				}
 			],
-<<<<<<< HEAD
 			currentUser: ""
-=======
-			tracking: []
->>>>>>> 8993713b4ef7b35d85e862a9e21d19f800b2c8a0
+			// tracking: []
 		},
 		actions: {
 			setCurrentUser: email => {
-				getStore().currentUser = email;
+				let store = getStore();
+				store.currentUser = email;
+				setStore(store);
 			},
 			getStudents: () => {
 				return getStore().students;
@@ -112,14 +111,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				return quote;
 			},
-			getQuotesByUser: id => {
+			getQuotesByUser: email => {
+				// GETS QUOTES BY USER EMAIL
 				const quotes = getStore().quotes;
-				id = parseInt(id);
+				// id = parseInt(id);
 				let quote = {};
 				let userQuotes = [];
 
 				quotes.forEach(element => {
-					if (id == element.userId) {
+					if (email == element.userEmail) {
 						quote = element;
 						userQuotes.push(quote);
 					}
@@ -159,7 +159,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					City: City,
 					state: state,
 					zipcode: zipcode,
-					userId: userId
+					userEmail: userId
 				};
 				store.quotes = [...store.quotes, newQuotes];
 				setStore(store);

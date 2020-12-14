@@ -11,7 +11,7 @@ export function QuoteForm(props) {
 	const [City, setCity] = useState("");
 	const [state, setstate] = useState("");
 	const [zipcode, setzipcode] = useState("");
-	const [userId, setuserId] = useState("");
+	const [userEmail, setuserEmail] = useState("");
 
 	const { store, actions } = useContext(Context);
 
@@ -21,7 +21,7 @@ export function QuoteForm(props) {
 		// 	alert("form cannot be empty");
 		// 	return;
 		// }
-		actions.addQuote(cLength, Width, Heigth, Weight, Address, City, state, zipcode, userId);
+		actions.addQuote(cLength, Width, Heigth, Weight, Address, City, state, zipcode, userEmail);
 
 		// props.addStudent(value);
 
@@ -33,19 +33,19 @@ export function QuoteForm(props) {
 		setCity("");
 		setstate("");
 		setzipcode("");
-		setuserId("");
+		setuserEmail("");
 	};
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
 				<h2>Add New Quote</h2>
 				<input
-					type="number"
+					type="email"
 					className="input"
-					value={userId}
-					placeholder="User ID"
+					value={userEmail}
+					placeholder="User Email"
 					required
-					onChange={e => setuserId(e.target.value)}
+					onChange={e => setuserEmail(e.target.value)}
 				/>
 
 				<input

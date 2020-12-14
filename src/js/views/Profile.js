@@ -9,23 +9,21 @@ import PropTypes from "prop-types";
 
 export function Profile() {
 	const { store, actions } = useContext(Context);
-<<<<<<< HEAD
 	console.log(store);
-=======
 
->>>>>>> 8993713b4ef7b35d85e862a9e21d19f800b2c8a0
-	let params = useParams();
+	// let params = useParams();
 	let history = useHistory();
-	let student = actions.getStudent(params.id);
+	let currentUser = store.currentUser;
+	// let student = actions.getStudent(params.id);
 	// let quote = actions.getQuote(student.companyID);
-	let userQuotes = actions.getQuotesByUser(params.id);
-	console.log(student);
+	let userQuotes = actions.getQuotesByUser(currentUser);
+	console.log(userQuotes);
 	let content = "User not found";
-	if (Object.keys(student).length !== 0) {
+	if (currentUser !== "") {
 		content = (
 			<div>
-				<h3>User Name: {student.name}</h3>
-				<p> User Id: {student.id}</p>
+				<h3>User Email: {currentUser}</h3>
+				{/* <p> User Id: {student.id}</p> */}
 				{/* <p>Quotes: {quote.Address}</p> */}
 				<button onClick={() => history.goBack()}>Go back</button>
 			</div>
@@ -34,9 +32,10 @@ export function Profile() {
 	return (
 		<div>
 			{content}
-
+			{/* <h1>Profile: {currentUser}</h1> */}
 			<QuoteForm />
 			{/* <QuoteCard quotes={store.quotes[0]} /> */}
+
 			{userQuotes.map((quote, index) => (
 				<QuoteCard key={index} quotes={quote} />
 			))}
