@@ -30,15 +30,18 @@ export function Profile() {
 		);
 	}
 	return (
-		<div>
+		<div className="profile-content">
 			{content}
 			{/* <h1>Profile: {currentUser}</h1> */}
 			<QuoteForm />
 			{/* <QuoteCard quotes={store.quotes[0]} /> */}
+			<br />
+			<hr className="featurette-form" />
 
 			{userQuotes.map((quote, index) => (
 				<QuoteCard key={index} quotes={quote} />
 			))}
+			<hr className="featurette-form" />
 		</div>
 	);
 }

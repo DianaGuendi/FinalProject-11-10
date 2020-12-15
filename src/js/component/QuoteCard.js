@@ -16,27 +16,27 @@ export function QuoteCard(props) {
 				<div className="quotes row">
 					<h1 className="card-titleQ col-3">
 						Length:
-						{props.quotes.cLength}
+						{props.quotes.clength}
 					</h1>
 					<h1 className="card-titleQ col-3">
 						Width:
-						{props.quotes.Width}
+						{props.quotes.width}
 					</h1>
 					<h1 className="card-titleQ col-3">
 						Height:
-						{props.quotes.Height}
+						{props.quotes.height}
 					</h1>
 					<h1 className="card-titleQ col-3">
 						Weight:
-						{props.quotes.Weight}
+						{props.quotes.weight}
 					</h1>
 				</div>
 
 				<div className="quotes row">
-					<h1 className="card-titleQ col-3">{props.quotes.Address}</h1>
-					<h1 className="card-titleQ col-3">{props.quotes.City}</h1>
-					<h1 className="card-titleQ col-3">{props.quotes.state}</h1>
-					<h1 className="card-titleQ col-3">{props.quotes.zipcode}</h1>
+					<h1 className="card-titleQ col-3">Address: {props.quotes.address}</h1>
+					<h1 className="card-titleQ col-3">City: {props.quotes.city}</h1>
+					<h1 className="card-titleQ col-3">State: {props.quotes.state}</h1>
+					<h1 className="card-titleQ col-3">Zipcode: {props.quotes.zipcode}</h1>
 				</div>
 			</div>
 		</div>

@@ -7,13 +7,11 @@ export function Services() {
 
 			<div className="row featurette">
 				<div className="col-md-7">
-					<h2 className="featurette-heading">
-						Air Freight <span className="text-muted">It’ll blow your mind.</span>
-					</h2>
+					<h2 className="featurette-heading">Air Freight</h2>
 					<p className="lead">
-						Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-						semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus
-						ac cursus commodo.
+						Through our international partner network, MIT LOGISTICS INC offers air freight services to most
+						locations around the world. We pride ourselves on our ability to help everyone -- from
+						first-time shippers to our established air import and export customers.
 					</p>
 				</div>
 				<div className="col-md-5">
@@ -21,7 +19,7 @@ export function Services() {
 						className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
 						width="500"
 						height="500"
-						xmlns="http://www.w3.org/2000/svg"
+						xmlns="https://images.pexels.com/photos/249581/pexels-photo-249581.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
 						preserveAspectRatio="xMidYMid slice"
 						focusable="false"
 						role="img"
@@ -39,13 +37,11 @@ export function Services() {
 
 			<div className="row featurette">
 				<div className="col-md-7 order-md-2">
-					<h2 className="featurette-heading">
-						Ocean Freight <span className="text-muted">See for yourself.</span>
-					</h2>
+					<h2 className="featurette-heading">Ocean Freight</h2>
 					<p className="lead">
-						Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-						semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus
-						ac cursus commodo.
+						At MIT LOGISTICS INC we get your ocean freight where it needs to go as quickly and economically
+						as possible. Working a network of shipping lines, we leverage our vast industry experience to
+						get you the best ocean freight rates
 					</p>
 				</div>
 				<div className="col-md-5 order-md-1">
@@ -71,14 +67,12 @@ export function Services() {
 
 			<div className="row featurette">
 				<div className="col-md-7">
-					<h2 className="featurette-heading">
-						3PL (third party logistics)
-						<span className="text-muted">Checkmate.</span>
-					</h2>
+					<h2 className="featurette-heading">Land Freight Services</h2>
 					<p className="lead">
-						Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-						semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus
-						ac cursus commodo.
+						A simple domestic inland can be the best option for your cargo to move across the US or even
+						just across the county. We coordinate the pickup, track the shipment, and ensure it is delivered
+						the last mile to its final destination. When we handle all the details of your shipment, you
+						have a guarantee of great service.
 					</p>
 				</div>
 				<div className="col-md-5">

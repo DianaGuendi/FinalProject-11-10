@@ -31,6 +31,7 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
 			 *
 			 **/
+
 			//CHECK IF THERE IS A FIREBASE USER
 			firebase.auth().onAuthStateChanged(user => {
 				if (user) {
