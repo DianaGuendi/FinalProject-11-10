@@ -8,8 +8,10 @@ export function Quotes() {
 	return (
 		<div className="container">
 			<hr className="featurette-divider" />
-			<UserList />
-			<hr className="featurette-divider" />
+
+			<h1 className="quote-title"> Submit your quote: </h1>
+			{/* <UserList />
+			<hr className="featurette-divider" /> */}
 			<div className="Quotes-form">
 				<Form>
 					<Form.Group controlId="exampleForm.SelectCustom">

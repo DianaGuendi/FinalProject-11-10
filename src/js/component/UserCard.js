@@ -23,9 +23,9 @@ export function UserCard(props) {
 					</p>
 					<p className="card-text">
 						Quotes:
-						{quotes[props.student.companyID - 1].zipcode}
+						{/* {quotes[props.student.companyID - 1].zipcode}
 						<br />
-						{quotes[props.student.companyID - 1].Address}
+						{quotes[props.student.companyID - 1].Address} */}
 					</p>
 					<Link
 						className="btn btn-info"

@@ -14,9 +14,9 @@ export function Card(props) {
 						"Some quick example text to build on the card title and make up the bulk's of the card's content. This is an example of how the card will be render on our website."
 					}
 				</p>
-				<a href="#" className="btn btn-primary">
+				{/* <a href="#" className="btn btn-primary">
 					Find out more!
-				</a>
+				</a> */}
 			</div>
 		</div>
 	);
