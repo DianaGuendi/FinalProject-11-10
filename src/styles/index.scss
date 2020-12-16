@@ -82,8 +82,10 @@
 }
 
 .image-about {
-    max-width: 500px;
+    max-width: 400px;
     max-height: auto;
+    padding-top: 100px;
+    padding-right: 50px;
 
 
 }
@@ -153,24 +155,26 @@ font-size: 15px;
 .container-main {
     height: 440px;
     width: auto;
-    padding-left: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .container-airlines {
     display: flex;
     background-image: url("https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     align-items: center;
     
-    
-    
+}
+.buttons{
+    padding-bottom: 10px;
 }
 .container-trucking {
     display: flex;
     background-image: url("https://images.pexels.com/photos/2800121/pexels-photo-2800121.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
     background-repeat: no-repeat;
-    background-size: contain;
     align-items: center;
+    background-size: cover;
   
    
    

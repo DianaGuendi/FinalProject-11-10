@@ -24,7 +24,7 @@ export function About() {
 						</div>
 						<div className="col-sm-5">
 							<img
-								className="container-fluid"
+								className="image-about"
 								src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 								alt="Girl in a jacket"
 							/>

@@ -131,7 +131,7 @@ export function Quotes() {
 						</Form.Group>
 
 						<Form.Group as={Col} controlId="formGridZip">
-							<Form.Label>Zip</Form.Label>
+							<Form.Label>Zipcode</Form.Label>
 							<Form.Control />
 						</Form.Group>
 					</Form.Row>

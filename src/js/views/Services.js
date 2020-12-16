@@ -17,21 +17,11 @@ export function Services() {
 					</p>
 				</div>
 				<div className="col-md-5">
-					<svg
-						className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-						width="500"
-						height="500"
-						xmlns="https://images.pexels.com/photos/249581/pexels-photo-249581.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-						preserveAspectRatio="xMidYMid slice"
-						focusable="false"
-						role="img"
-						aria-label="Placeholder: 500x500">
-						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#eee" />
-						<text x="50%" y="50%" fill="#aaa" dy=".3em">
-							500x500
-						</text>
-					</svg>
+					<img
+						className="image-about"
+						src="https://cdn.pixabay.com/photo/2017/04/08/22/04/airplane-2214497__340.jpg"
+						alt="Air cargo"
+					/>
 				</div>
 			</div>
 
@@ -49,21 +39,11 @@ export function Services() {
 					</p>
 				</div>
 				<div className="col-md-5 order-md-1">
-					<svg
-						className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-						width="500"
-						height="500"
-						xmlns="http://www.w3.org/2000/svg"
-						preserveAspectRatio="xMidYMid slice"
-						focusable="false"
-						role="img"
-						aria-label="Placeholder: 500x500">
-						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#eee" />
-						<text x="50%" y="50%" fill="#aaa" dy=".3em">
-							500x500
-						</text>
-					</svg>
+					<img
+						className="image-about"
+						src="https://cdn.pixabay.com/photo/2019/04/28/15/18/container-ship-on-the-sea-4163424__340.jpg"
+						alt="ocean cargo"
+					/>
 				</div>
 			</div>
 
@@ -82,21 +62,11 @@ export function Services() {
 					</p>
 				</div>
 				<div className="col-md-5">
-					<svg
-						className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-						width="500"
-						height="500"
-						xmlns="http://www.w3.org/2000/svg"
-						preserveAspectRatio="xMidYMid slice"
-						focusable="false"
-						role="img"
-						aria-label="Placeholder: 500x500">
-						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#eee" />
-						<text x="50%" y="50%" fill="#aaa" dy=".3em">
-							500x500
-						</text>
-					</svg>
+					<img
+						className="image-about"
+						src="https://cdn.pixabay.com/photo/2014/04/24/16/40/truck-331499__340.jpg"
+						alt="Trucking"
+					/>
 				</div>
 			</div>
 			<hr className="featurette-divider" />
@@ -114,21 +84,11 @@ export function Services() {
 				</div>
 
 				<div className="col-md-5 order-md-1">
-					<svg
-						className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-						width="500"
-						height="500"
-						xmlns="http://www.w3.org/2000/svg"
-						preserveAspectRatio="xMidYMid slice"
-						focusable="false"
-						role="img"
-						aria-label="Placeholder: 500x500">
-						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#eee" />
-						<text x="50%" y="50%" fill="#aaa" dy=".3em">
-							500x500
-						</text>
-					</svg>
+					<img
+						className="image-about"
+						src="https://cdn.pixabay.com/photo/2020/10/01/17/11/store-5619201__340.jpg"
+						alt="Warehouse"
+					/>
 				</div>
 			</div>
 
