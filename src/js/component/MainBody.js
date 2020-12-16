@@ -11,28 +11,28 @@ export function MainBody() {
 				<div className="col-sm">
 					<Card myIcon="fas fa-plane-departure" myTittle="Air Transportation" />
 					<br />
-					<Link to="/Services.js" className="btn btn-primary">
+					<a href="/Services#air-trans" className="btn btn-primary">
 						Find out more!
-					</Link>
+					</a>
 				</div>
 				<div className="col-sm">
 					<Card myIcon="fas fa-ship" myTittle=" Ocean Transportation" />
 					<br />
-					<Link to="/Services.js#air-trans" className="btn btn-primary">
+					<a href="/Services#ocean-trans" className="btn btn-primary">
 						Find out more!
-					</Link>
+					</a>
 				</div>
 				<div className="col-sm">
 					<Card myIcon="fas fa-truck-moving" myTittle="Land Transportation" />
 					<br />
-					<a href="#" className="btn btn-primary">
+					<a href="/Services#land-trans" className="btn btn-primary">
 						Find out more!
 					</a>
 				</div>
 				<div className="col-sm">
 					<Card myIcon="fas fa-warehouse" myTittle="Warehouse Services" />
 					<br />
-					<a href="#" className="btn btn-primary">
+					<a href="/Services#warehouse-serv" className="btn btn-primary">
 						Find out more!
 					</a>
 				</div>

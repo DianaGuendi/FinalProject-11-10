@@ -89,15 +89,26 @@
 
 
 }
+.about-img {
+    align-self: center;
+}
+.main-cont {
+    margin: 15px;
+}
 
 .card-title {
     text-align: center;
 }
+.card-body {
+    height: 65px;
+}
 
 .footer {
 color: white;
-background-color: rgb(57, 61, 65);
+// background-color: rgb(57, 61, 65);
+background-color: rgb(1, 46, 107);
 padding-top: 15px;
+height: 135px;
 }
 .card-info {
     margin-bottom: auto;
@@ -117,7 +128,8 @@ display: flex;
 .copyrights {
 
 color: white;
-background-color: rgb(57, 61, 65);
+// background-color: rgb(57, 61, 65);
+background-color: rgb(1, 46, 107);
 justify-content: center;
 font-size: 15px;
 
@@ -151,6 +163,7 @@ font-size: 15px;
 }
 .card-body {
     padding: 0px;
+    height: 80px;
 }
 .container-main {
     height: 440px;
@@ -178,6 +191,12 @@ font-size: 15px;
   
    
    
+}
+
+// home style
+
+.text-center {
+    justify-content: center;
 }
 
 .icon-title {

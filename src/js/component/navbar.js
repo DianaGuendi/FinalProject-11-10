@@ -27,7 +27,7 @@ export const Navbart = () => {
 				<div className="logomit col-3">
 					<img id="logo" src={mitlog} />
 				</div>
-				<div className="info-nav col-6">
+				<div className="info-nav col-3">
 					<div className="phones">
 						<i className="fas fa-phone col-1" />
 						<div className="col-11">
@@ -43,6 +43,11 @@ export const Navbart = () => {
 							</a>
 						</div>
 					</div>
+				</div>
+				<div className="info-nav col-3">
+					<a href="/Quotes#request-quote" className="btn btn-warning">
+						Request a Quote!
+					</a>
 				</div>
 				{/* codigo de login =======================================================*/}
 				<div className="login-but col-3">

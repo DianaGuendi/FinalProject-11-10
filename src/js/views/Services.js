@@ -6,10 +6,8 @@ export function Services() {
 			<hr className="featurette-divider" />
 
 			<div className="row featurette">
-				<div className="col-md-7">
-					<h2 className="featurette-heading" id="air-trans">
-						Air Transportation
-					</h2>
+				<div className="col-md-7" id="air-trans">
+					<h2 className="featurette-heading">Air Transportation</h2>
 					<p className="lead">
 						Through our international partner network, MIT LOGISTICS INC offers air freight services to most
 						locations around the world. We pride ourselves on our ability to help everyone -- from
@@ -28,10 +26,8 @@ export function Services() {
 			<hr className="featurette-divider" />
 
 			<div className="row featurette">
-				<div className="col-md-7 order-md-2">
-					<h2 className="featurette-heading" id="ocean-trans">
-						Ocean Transportation
-					</h2>
+				<div className="col-md-7 order-md-2" id="ocean-trans">
+					<h2 className="featurette-heading">Ocean Transportation</h2>
 					<p className="lead">
 						At MIT LOGISTICS INC we get your ocean freight where it needs to go as quickly and economically
 						as possible. Working a network of shipping lines, we leverage our vast industry experience to
@@ -50,7 +46,7 @@ export function Services() {
 			<hr className="featurette-divider" />
 
 			<div className="row featurette">
-				<div className="col-md-7">
+				<div className="col-md-7" id="land-trans">
 					<h2 className="featurette-heading" id="land-trans">
 						Land Transportation
 					</h2>
@@ -71,10 +67,8 @@ export function Services() {
 			</div>
 			<hr className="featurette-divider" />
 			<div className="row featurette">
-				<div className="col-md-7 order-md-2">
-					<h2 className="featurette-heading" id="warehouse-serv">
-						Warehouse Services
-					</h2>
+				<div className="col-md-7 order-md-2" id="warehouse-serv">
+					<h2 className="featurette-heading">Warehouse Services</h2>
 					<p className="lead">
 						We take pride in catering to a broad range of clientele. Our warehousing service is
 						comprehensive, reliable and flexible which is essential to accompany our clients in their

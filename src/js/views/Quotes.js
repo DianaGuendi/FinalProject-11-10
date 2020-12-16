@@ -9,7 +9,10 @@ export function Quotes() {
 		<div className="container">
 			<hr className="featurette-divider" />
 
-			<h1 className="quote-title"> Submit your quote: </h1>
+			<h1 className="quote-title" id="request-quote">
+				{" "}
+				Submit your quote:{" "}
+			</h1>
 			{/* <UserList />
 			<hr className="featurette-divider" /> */}
 			<div className="Quotes-form">
