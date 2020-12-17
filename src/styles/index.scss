@@ -25,9 +25,8 @@
     background-color: lightgrey;
 }
 
-.login-button {
-    background-color: rgb(1, 46, 107);
-}
+
+
 .logoinfolog{
     padding: 2rem;
 }
@@ -47,6 +46,14 @@
     visibility: hidden;
     
   }
+}
+.login-but {
+    display: flex;
+}
+.mbtns{
+ width: 100px; 
+ height: 40px;  
+ margin-right: 5px;
 }
 .navbar-alig {
     justify-content: center;

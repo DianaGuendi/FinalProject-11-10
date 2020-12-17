@@ -53,7 +53,7 @@ export const Navbart = () => {
 				<div className="logomit col-3">
 					<img id="logo" src={mitlog} />
 				</div>
-				<div className="info-nav col-3">
+				<div className="info-nav col-2">
 					<div className="phones">
 						<i className="fas fa-phone col-1" />
 						<div className="col-11">
@@ -76,33 +76,32 @@ export const Navbart = () => {
 					</a>
 				</div>
 				{/* codigo de login =======================================================*/}
-				<div className="login-but col-2">
-					<div className="row-1">
-						<Button className="login-button" variant="primary" onClick={handleShow} data-modal="modal1">
-							Login
-						</Button>
-						<Modal show={show} onHide={handleClose} id="modal1">
-							<Modal.Header closeButton>
-								<Modal.Title>Login</Modal.Title>
-							</Modal.Header>
-							<form id="login-form" onSubmit={handleLogin}>
-								<div className="input-field">
-									<label htmlFor="login-email">Email address</label>
-									<input name="email" id="txtEmail" type="email" placeholder="Email" />
-								</div>
-								<div className="input-field">
-									<label htmlFor="login-password">Your password</label>
-									<input name="password" id="txtPassword" type="password" placeholder="Password" />
-								</div>
-								<button className="btn btn-action" id="btnLogin">
-									Login
-								</button>
-							</form>
-						</Modal>
-					</div>
+				<div className="login-but col-3">
+					<Button className="mbtns" variant="primary" onClick={handleShow} data-modal="modal1">
+						Log-In
+					</Button>
+					<Modal show={show} onHide={handleClose} id="modal1">
+						<Modal.Header closeButton>
+							<Modal.Title>Login</Modal.Title>
+						</Modal.Header>
+						<form id="login-form" onSubmit={handleLogin}>
+							<div className="input-field">
+								<label htmlFor="login-email">Email address</label>
+								<input name="email" id="txtEmail" type="email" placeholder="Email" />
+							</div>
+							<div className="input-field">
+								<label htmlFor="login-password">Your password</label>
+								<input name="password" id="txtPassword" type="password" placeholder="Password" />
+							</div>
+							<button className="btn btn-action" id="btnLogin">
+								LogIn
+							</button>
+						</form>
+					</Modal>
+
 					{/* ++++++++++++++SignUp++++++++++++++++++++++++++++++++++++++++++++++++++ */}
-					<div className="SignUp-but row-2">
-						<Button className="SignUp-button" variant="primary" onClick={handleShow1} data-modal="modal2">
+					<div className="SignUp-but">
+						<Button className="mbtns" variant="primary" onClick={handleShow1} data-modal="modal2">
 							SignUp
 						</Button>
 						<Modal show={show1} onHide={handleClose1} id="modal2">
@@ -124,13 +123,14 @@ export const Navbart = () => {
 							</form>
 						</Modal>
 					</div>
-					<div className="SignUp-but row-3">
-						<Button className="SignUp-button" variant="primary" onClick={handleLogOut}>
+
+					<div className="SignUp-but">
+						<Button className="mbtns" variant="primary" onClick={handleLogOut}>
 							LogOut
 						</Button>
 					</div>
 				</div>
-				<div className="navbar-alig">
+				<div className="navbar-alig col-12">
 					<Navbar collapseOnSelect expand="lg ">
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav ">
