@@ -7,7 +7,7 @@ export function Tracking() {
 
 	return (
 		<div className="tracking-container">
-			<hr className="tracking-divider" />
+			<hr className="featurette-divider" />
 			<div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 				<h1 className="display-4">Track Your Cargo</h1>
 			</div>
@@ -86,7 +86,7 @@ export function Tracking() {
 					<p className="airline">Airlines</p>
 				</div>
 			</div>
-			<hr className="tracking-divider" />
+			<hr className="featurette-divider" />
 			<br />
 			<div className="container-main row">
 				<div className="icon-title col-5">
@@ -163,7 +163,7 @@ export function Tracking() {
 					</div>
 				</div>
 			</div>
-			<hr className="tracking-divider" />
+			<hr className="featurette-divider" />
 
 			<div>
 				<p>{store.tracking}</p>
