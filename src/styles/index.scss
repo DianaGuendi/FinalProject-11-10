@@ -14,7 +14,7 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-
+// Navbar style
 
 #navlink {
     color: whitesmoke;
@@ -41,9 +41,7 @@
     height: auto;
    
 }
-// .info-nav{
-//     padding-left: 215px;
-// }
+
 @media screen and (max-width: 425px) {
   .info-nav {
     visibility: hidden;
@@ -82,6 +80,7 @@
 }
 
 .image-about {
+    display: flex;
     max-width: 400px;
     max-height: auto;
     padding-top: 100px;
@@ -89,9 +88,7 @@
 
 
 }
-.about-img {
-    align-self: center;
-}
+
 .main-cont {
     margin: 15px;
 }
@@ -102,10 +99,12 @@
 .card-body {
     height: 65px;
 }
-
+.card {
+    margin-bottom: 15px;
+}
 .footer {
 color: white;
-// background-color: rgb(57, 61, 65);
+
 background-color: rgb(1, 46, 107);
 padding-top: 15px;
 height: 135px;
@@ -128,7 +127,7 @@ display: flex;
 .copyrights {
 
 color: white;
-// background-color: rgb(57, 61, 65);
+
 background-color: rgb(1, 46, 107);
 justify-content: center;
 font-size: 15px;
@@ -200,10 +199,12 @@ font-size: 15px;
 }
 
 .icon-title {
+    
     align-self: center;
     text-align: center;
 }
 .fa-plane-departure {
+    padding-top: 25px;
     font-size: 6vw;
     color: rgb(1, 46, 107);
     margin-top: 5px;
@@ -214,11 +215,13 @@ font-size: 15px;
 }
 
 .fa-truck-moving {
+    padding-top: 25px;
     font-size: 6vw;
     color: rgb(1, 46, 107);
     margin-top: 5px;
 }
 .trucking {
+    padding-top: 25px;
     font-size: 7vw;
     color: rgb(1, 46, 107);
 

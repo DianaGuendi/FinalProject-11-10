@@ -1,152 +1,244 @@
 import React from "react";
-import { Modal, Button, InputGroup, FormControl, Form, Col } from "react-bootstrap";
-import { QuoteCard } from "../component/QuoteCard";
-import { QuotesList } from "../component/QuotesList";
-import { UserList } from "../component/UserList";
+import emailjs from "emailjs-com";
 
-export function Quotes() {
+export default function ContactUs() {
+	function sendEmail(e) {
+		e.preventDefault();
+
+		emailjs.sendForm("service_z1203zc", "template_a4850ao", e.target, "user_OaT8pAYPS5zxkpK0KMNFJ").then(
+			result => {
+				console.log(result.text);
+			},
+			error => {
+				console.log(error.text);
+			}
+		);
+	}
+
 	return (
 		<div className="container">
 			<hr className="featurette-divider" />
 
 			<h1 className="quote-title" id="request-quote">
-				{" "}
-				Submit your quote:{" "}
+				Submit your quote:
 			</h1>
-			{/* <UserList />
-			<hr className="featurette-divider" /> */}
-			<div className="Quotes-form">
-				<Form>
-					<Form.Group controlId="exampleForm.SelectCustom">
-						<Form.Label>Type of Cargo</Form.Label>
-						<Form.Control as="select" custom>
-							<option>General Cargo</option>
-							<option>Hazmat</option>
-						</Form.Control>
-					</Form.Group>
+			<form className="contact-form" onSubmit={sendEmail}>
+				<input type="hidden" name="contact_number" />
+				<label>Name</label>
+				<input type="text" name="to_name" />
+				<label>Email</label>
+				<input type="email" name="from_name" />
+				<label>Length</label>
+				<input type="number" name="Length" />
+				<label>Width</label>
+				<input type="number" name="Width" />
+				<label>Height</label>
+				<input type="number" name="Height" />
+				<label>Weight(Lbs)</label>
+				<input type="number" name="Weight" />
+				<label>Address</label>
+				<input type="text" name="Address" />
+				<label>City</label>
+				<input type="text" name="City" />
+				<label>State</label>
+				<input type="text" name="State" />
+				<label>Zipcode</label>
+				<input type="number" name="Zipcode" />
 
-					<Form.Row>
-						<Form.Group as={Col} controlId="formGridEmail">
-							<Form.Label>Name</Form.Label>
-							<Form.Control type="string" placeholder="Name" />
-						</Form.Group>
-						<Form.Group as={Col} controlId="formGridEmail">
-							<Form.Label>Email</Form.Label>
-							<Form.Control type="email" placeholder="Enter email" />
-						</Form.Group>
-
-						<Form.Group as={Col} controlId="formGridPassword">
-							<Form.Label>Phone</Form.Label>
-							<Form.Control type="number" placeholder="Phone" />
-						</Form.Group>
-					</Form.Row>
-					<Form.Row>
-						<Form.Group as={Col} controlId="formGridEmail">
-							<Form.Label>Length</Form.Label>
-							<Form.Control type="number" />
-						</Form.Group>
-
-						<Form.Group as={Col} controlId="formGridPassword">
-							<Form.Label>Width</Form.Label>
-							<Form.Control type="number" />
-						</Form.Group>
-						<Form.Group as={Col} controlId="formGridPassword">
-							<Form.Label>Height</Form.Label>
-							<Form.Control type="number" />
-						</Form.Group>
-						<Form.Group as={Col} controlId="formGridPassword">
-							<Form.Label>Weight(Lbs)</Form.Label>
-							<Form.Control type="number" />
-						</Form.Group>
-					</Form.Row>
-
-					<Form.Group controlId="formGridAddress1">
-						<Form.Label>Address</Form.Label>
-						<Form.Control placeholder="1234 Main St" />
-					</Form.Group>
-
-					<Form.Group controlId="formGridAddress2">
-						<Form.Label>Address 2</Form.Label>
-						<Form.Control placeholder="Suite, Unit" />
-					</Form.Group>
-
-					<Form.Row>
-						<Form.Group as={Col} controlId="formGridCity">
-							<Form.Label>City</Form.Label>
-							<Form.Control />
-						</Form.Group>
-
-						<Form.Group as={Col} controlId="formGridState">
-							<Form.Label>State</Form.Label>
-							<Form.Control as="select" defaultValue="Choose...">
-								<option value="AL">Alabama</option>
-								<option value="AK">Alaska</option>
-								<option value="AZ">Arizona</option>
-								<option value="AR">Arkansas</option>
-								<option value="CA">California</option>
-								<option value="CO">Colorado</option>
-								<option value="CT">Connecticut</option>
-								<option value="DE">Delaware</option>
-								<option value="DC">District Of Columbia</option>
-								<option value="FL">Florida</option>
-								<option value="GA">Georgia</option>
-								<option value="HI">Hawaii</option>
-								<option value="ID">Idaho</option>
-								<option value="IL">Illinois</option>
-								<option value="IN">Indiana</option>
-								<option value="IA">Iowa</option>
-								<option value="KS">Kansas</option>
-								<option value="KY">Kentucky</option>
-								<option value="LA">Louisiana</option>
-								<option value="ME">Maine</option>
-								<option value="MD">Maryland</option>
-								<option value="MA">Massachusetts</option>
-								<option value="MI">Michigan</option>
-								<option value="MN">Minnesota</option>
-								<option value="MS">Mississippi</option>
-								<option value="MO">Missouri</option>
-								<option value="MT">Montana</option>
-								<option value="NE">Nebraska</option>
-								<option value="NV">Nevada</option>
-								<option value="NH">New Hampshire</option>
-								<option value="NJ">New Jersey</option>
-								<option value="NM">New Mexico</option>
-								<option value="NY">New York</option>
-								<option value="NC">North Carolina</option>
-								<option value="ND">North Dakota</option>
-								<option value="OH">Ohio</option>
-								<option value="OK">Oklahoma</option>
-								<option value="OR">Oregon</option>
-								<option value="PA">Pennsylvania</option>
-								<option value="RI">Rhode Island</option>
-								<option value="SC">South Carolina</option>
-								<option value="SD">South Dakota</option>
-								<option value="TN">Tennessee</option>
-								<option value="TX">Texas</option>
-								<option value="UT">Utah</option>
-								<option value="VT">Vermont</option>
-								<option value="VA">Virginia</option>
-								<option value="WA">Washington</option>
-								<option value="WV">West Virginia</option>
-								<option value="WI">Wisconsin</option>
-								<option value="WY">Wyoming</option>
-							</Form.Control>
-						</Form.Group>
-
-						<Form.Group as={Col} controlId="formGridZip">
-							<Form.Label>Zipcode</Form.Label>
-							<Form.Control />
-						</Form.Group>
-					</Form.Row>
-
-					<Button variant="primary" type="submit">
-						Submit
-					</Button>
-				</Form>
-			</div>
-			<hr className="featurette-divider" />
+				<input type="submit" value="Send" />
+			</form>
 		</div>
 	);
 }
 
-export default Quotes;
+// import React, { Component } from "react";
+// import * as emailjs from "emailjs-com";
+// import Layout from "../../js/layout";
+
+// import {
+// 	Modal,
+// 	Button,
+// 	InputGroup,
+// 	FormGroup,
+// 	FormFeedback,
+// 	FormControl,
+// 	Form,
+// 	Col,
+// 	Label,
+// 	Input
+// } from "react-bootstrap";
+
+// class ContactForm extends Component {
+// 	state = {
+// 		name: "",
+// 		email: "",
+// 		Length: "",
+// 		Width: "",
+// 		Height: "",
+// 		Weight: "",
+// 		Address: "",
+// 		City: "",
+// 		State: "",
+// 		Zipcode: ""
+// 	};
+// 	handleSubmit(e) {
+// 		e.preventDefault();
+
+// 		const { name, email, Length, Width, Height, Weight, Address, City, State, Zipcode } = this.state;
+// 		let templateParams = {
+// 			from_name: email,
+// 			to_name: "alozano@mitlg.com",
+// 			subject: subject,
+// 			message_html: message
+// 		};
+// 		emailjs.send("outlook", "template_05jcv3w", templateParams, "user_OaT8pAYPS5zxkpK0KMNFJ");
+// 		this.resetForm();
+// 	}
+// 	resetForm() {
+// 		this.setState({
+// 			name: "",
+// 			email: "",
+// 			Length: "",
+// 			Width: "",
+// 			Height: "",
+// 			Weight: "",
+// 			Address: "",
+// 			City: "",
+// 			State: "",
+// 			Zipcode: ""
+// 		});
+// 	}
+// 	handleChange = (param, e) => {
+// 		this.setState({ [param]: e.target.value });
+// 	};
+// 	render() {
+// 		return (
+
+// 				<Layout>
+// 					<h1 className="p-heading1">Send new Quote</h1>
+// 					<Form onSubmit={this.handleSubmit.bind(this)}>
+// 						<Form.Group controlId="formBasicEmail">
+// 							<Form.Label className="text-muted"> Email address</Form.Label>
+// 							<Input
+// 								type="email"
+// 								name="email"
+// 								value={this.state.email}
+// 								className="text-primary"
+// 								onChange={this.handleChange.bind(this, "email")}
+// 								placeholder="Enter email"
+// 							/>
+// 						</Form.Group>
+{
+	/* <FormGroup controlId="formBasicName">
+							<Label className="text-muted">Name</Label>
+							<Input
+								type="text"
+								name="name"
+								value={this.state.name}
+								className="text-primary"
+								onChange={this.handleChange.bind(this, "name")}
+								placeholder="Name"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasicLength">
+							<Label className="text-muted">Length</Label>
+							<Input
+								type="text"
+								name="Length"
+								className="text-primary"
+								value={this.state.Length}
+								onChange={this.handleChange.bind(this, "Length")}
+								placeholder="Length"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasicWidth">
+							<Label className="text-muted">Width</Label>
+							<Input
+								type="text"
+								name="Width"
+								className="text-primary"
+								value={this.state.Width}
+								onChange={this.handleChange.bind(this, "Width")}
+								placeholder="Width"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasicHeight">
+							<Label className="text-muted">Height</Label>
+							<Input
+								type="text"
+								name="Height"
+								className="text-primary"
+								value={this.state.Height}
+								onChange={this.handleChange.bind(this, "Height")}
+								placeholder="Height"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasicWeight">
+							<Label className="text-muted">Weight</Label>
+							<Input
+								type="text"
+								name="Weight"
+								className="text-primary"
+								value={this.state.Weight}
+								onChange={this.handleChange.bind(this, "Weight")}
+								placeholder="Weight (Lbs)"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasicAddress">
+							<Label className="text-muted">Address</Label>
+							<Input
+								type="text"
+								name="Address"
+								className="text-primary"
+								value={this.state.Address}
+								onChange={this.handleChange.bind(this, "Address")}
+								placeholder="Address"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasicCity">
+							<Label className="text-muted">City</Label>
+							<Input
+								type="text"
+								name="City"
+								className="text-primary"
+								value={this.state.City}
+								onChange={this.handleChange.bind(this, "City")}
+								placeholder="City"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasicState">
+							<Label className="text-muted">State</Label>
+							<Input
+								type="text"
+								name="State"
+								className="text-primary"
+								value={this.state.State}
+								onChange={this.handleChange.bind(this, "State")}
+								placeholder="State"
+							/>
+						</FormGroup>
+						<FormGroup controlId="formBasiZipcode">
+							<Label className="text-muted">Zipcode</Label>
+							<Input
+								type="textarea"
+								name="Zipcode"
+								className="text-primary"
+								value={this.state.Zipcode}
+								onChange={this.handleChange.bind(this, "Zipcode")}
+								placeholder="Zipcode"
+							/>
+						</FormGroup> */
+}
+{
+	/* <Button variant="primary" type="submit">
+							Submit
+						</Button>
+					</Form>
+					<hr className="featurette-divider" />
+				</Layout>
+			
+		);
+	}
+}
+export default ContactForm; */
+}

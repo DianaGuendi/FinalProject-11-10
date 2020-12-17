@@ -13,8 +13,8 @@ import { Tracking } from "./views/Tracking";
 import { Navbart } from "./component/navbar";
 import { Footer } from "./component/Footer";
 import { MainBody } from "./component/MainBody";
-import { Quotes } from "./views/Quotes";
-import { Quotess } from "./views/Quotess";
+import { Quotes } from "./views/Quote1";
+import ContactForm from "./views/Quotes.js";
 import { Profile } from "./views/Profile";
 
 //create your first component
@@ -42,7 +42,7 @@ const Layout = () => {
 						<Tracking />
 					</Route>
 					<Route path="/Quotes">
-						<Quotes />
+						<ContactForm />
 					</Route>
 					<Route path="/Profile">
 						<Profile />
