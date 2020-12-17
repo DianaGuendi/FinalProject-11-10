@@ -130,7 +130,7 @@ export const Navbart = () => {
 						</Button>
 					</div>
 				</div>
-				<div className="navbar-alig">
+				<div className="navbar-alig col-12">
 					<Navbar collapseOnSelect expand="lg ">
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav ">
