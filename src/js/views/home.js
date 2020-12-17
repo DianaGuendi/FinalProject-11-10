@@ -7,6 +7,7 @@ import { Carousel } from "react-bootstrap";
 export function Home() {
 	return (
 		<div className="container">
+			<hr className="featurette-divider" />
 			<div className="Carousel-container">
 				<Carousel>
 					<Carousel.Item interval={1000}>
@@ -41,10 +42,12 @@ export function Home() {
 					</Carousel.Item>
 				</Carousel>
 			</div>
+			<hr className="featurette-divider" />
 
 			<div className="text-center mt-5 row">
 				<MainBody />
 			</div>
+			<hr className="featurette-divider" />
 		</div>
 	);
 }
