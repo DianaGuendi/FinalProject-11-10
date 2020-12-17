@@ -8,8 +8,10 @@ export const Navbart = () => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-
-	//COPYT THIS
+	const [show1, setShow1] = useState(false);
+	const handleClose1 = () => setShow1(false);
+	const handleShow1 = () => setShow1(true);
+	//================LogIn==================================
 	const handleLogin = useCallback(async event => {
 		event.preventDefault();
 		const { email, password } = event.target.elements;
@@ -19,6 +21,30 @@ export const Navbart = () => {
 		} catch (error) {
 			alert(error);
 		}
+	}, []);
+	//=================SignUP=================================
+	const handleSignUp = useCallback(async event => {
+		event.preventDefault();
+		const { email, password } = event.target.elements;
+		try {
+			await firebase.auth().createUserWithEmailAndPassword(email.value, password.value);
+			location.replace("/Profile");
+		} catch (error) {
+			alert(error);
+		}
+	}, []);
+	//=================LogOut=================================
+	const handleLogOut = useCallback(async event => {
+		firebase
+			.auth()
+			.signOut()
+			.then(function() {
+				// Sign-out successful.
+				location.replace("/Home");
+			})
+			.catch(function(error) {
+				// An error happened.
+			});
 	}, []);
 
 	return (
@@ -50,87 +76,88 @@ export const Navbart = () => {
 					</a>
 				</div>
 				{/* codigo de login =======================================================*/}
-				<div className="login-but col-3">
-					<Button className="login-button" variant="primary" onClick={handleShow}>
-						Login
-					</Button>
-
-					<Modal show={show} onHide={handleClose} className="modal">
-						<Modal.Header closeButton>
-							<Modal.Title>Login</Modal.Title>
-						</Modal.Header>
-						<form id="login-form" onSubmit={handleLogin}>
-							<div className="input-field">
-								<label htmlFor="login-email">Email address</label>
-								{/* <input type="email" id="txtEmail" required /> */}
-								<input name="email" id="txtEmail" type="email" placeholder="Email" />
-							</div>
-							<div className="input-field">
-								<label htmlFor="login-password">Your password</label>
-								<input name="password" id="txtPassword" type="password" placeholder="Password" />
-								{/* <input type="password" id="txtPassword" required /> */}
-							</div>
-							<button className="btn btn-action" id="btnLogin">
-								Login
-							</button>
-							<button className="btn btn-action" id="btnSignUp">
-								SignUp
-							</button>
-							<button className="btn btn-action" id="btnLogout">
-								Logout
-							</button>
-						</form>
-					</Modal>
+				<div className="login-but col-2">
+					<div className="row-1">
+						<Button className="login-button" variant="primary" onClick={handleShow} data-modal="modal1">
+							Login
+						</Button>
+						<Modal show={show} onHide={handleClose} id="modal1">
+							<Modal.Header closeButton>
+								<Modal.Title>Login</Modal.Title>
+							</Modal.Header>
+							<form id="login-form" onSubmit={handleLogin}>
+								<div className="input-field">
+									<label htmlFor="login-email">Email address</label>
+									<input name="email" id="txtEmail" type="email" placeholder="Email" />
+								</div>
+								<div className="input-field">
+									<label htmlFor="login-password">Your password</label>
+									<input name="password" id="txtPassword" type="password" placeholder="Password" />
+								</div>
+								<button className="btn btn-action" id="btnLogin">
+									Login
+								</button>
+							</form>
+						</Modal>
+					</div>
+					{/* ++++++++++++++SignUp++++++++++++++++++++++++++++++++++++++++++++++++++ */}
+					<div className="SignUp-but row-2">
+						<Button className="SignUp-button" variant="primary" onClick={handleShow1} data-modal="modal2">
+							SignUp
+						</Button>
+						<Modal show={show1} onHide={handleClose1} id="modal2">
+							<Modal.Header closeButton>
+								<Modal.Title>SignUp</Modal.Title>
+							</Modal.Header>
+							<form id="SignUp-form" onSubmit={handleSignUp}>
+								<div className="input-field">
+									<label htmlFor="login-email">Email address</label>
+									<input name="email" id="txtEmail" type="email" placeholder="Email" />
+								</div>
+								<div className="input-field">
+									<label htmlFor="login-password">Your password</label>
+									<input name="password" id="txtPassword" type="password" placeholder="Password" />
+								</div>
+								<button className="btn btn-warning" id="btnSignUp">
+									SignUp
+								</button>
+							</form>
+						</Modal>
+					</div>
+					<div className="SignUp-but row-3">
+						<Button className="SignUp-button" variant="primary" onClick={handleLogOut}>
+							LogOut
+						</Button>
+					</div>
 				</div>
-			</div>
-			<div className="navbar-alig">
-				<Navbar collapseOnSelect expand="lg ">
-					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-					<Navbar.Collapse id="responsive-navbar-nav ">
-						<Nav className="justify-content-center">
-							<Nav.Link id="navlink" href="/">
-								Home
-							</Nav.Link>
-							<Nav.Link id="navlink" href="/About">
-								About
-							</Nav.Link>
-							<Nav.Link id="navlink" href="/Services">
-								Services
-							</Nav.Link>
-							<Nav.Link id="navlink" href="/Tracking">
-								Tracking
-							</Nav.Link>
-							<Nav.Link id="navlink" href="/Quotes">
-								Quotes
-							</Nav.Link>
-							{/* <Nav.Link id="navlink" href="#" data-target="modal-login">
+				<div className="navbar-alig">
+					<Navbar collapseOnSelect expand="lg ">
+						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+						<Navbar.Collapse id="responsive-navbar-nav ">
+							<Nav className="justify-content-center">
+								<Nav.Link id="navlink" href="/">
+									Home
+								</Nav.Link>
+								<Nav.Link id="navlink" href="/About">
+									About
+								</Nav.Link>
+								<Nav.Link id="navlink" href="/Services">
+									Services
+								</Nav.Link>
+								<Nav.Link id="navlink" href="/Tracking">
+									Tracking
+								</Nav.Link>
+								<Nav.Link id="navlink" href="/Quotes">
+									Quotes
+								</Nav.Link>
+								{/* <Nav.Link id="navlink" href="#" data-target="modal-login">
 								Login
 							</Nav.Link> */}
-						</Nav>
-					</Navbar.Collapse>
-				</Navbar>
+							</Nav>
+						</Navbar.Collapse>
+					</Navbar>
+				</div>
 			</div>
 		</div>
 	);
 };
-
-//   <!-- LOGIN MODAL -->
-{
-	/* <div id="modal-login" className="modal">
-	<div className="modal-content">
-		<h4>Login</h4>
-		<br />
-		<form id="login-form">
-			<div className="input-field">
-				<input type="email" id="login-email" required />
-				<label htmlFor="login-email">Email address</label>
-			</div>
-			<div className="input-field">
-				<input type="password" id="login-password" required />
-				<label htmlFor="login-password">Your password</label>
-			</div>
-			<button className="btn yellow darken-2 z-depth-0">Login</button>
-		</form>
-	</div>
-</div>; */
-}
