@@ -14,7 +14,7 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-
+// Navbar style
 
 #navlink {
     color: whitesmoke;
@@ -25,9 +25,8 @@
     background-color: lightgrey;
 }
 
-.login-button {
-    background-color: rgb(1, 46, 107);
-}
+
+
 .logoinfolog{
     padding: 2rem;
 }
@@ -41,14 +40,20 @@
     height: auto;
    
 }
-// .info-nav{
-//     padding-left: 215px;
-// }
+
 @media screen and (max-width: 425px) {
   .info-nav {
     visibility: hidden;
     
   }
+}
+.login-but {
+    display: flex;
+}
+.mbtns{
+ width: 100px; 
+ height: 40px;  
+ margin-right: 5px;
 }
 .navbar-alig {
     justify-content: center;
@@ -72,16 +77,10 @@
 
 
 
-.featurette-divider {
-    margin-top: 9rem;
-    background-color: rgb(237, 81, 27);
-    
-}
-.featurette-form {
-    background-color: rgb(237, 81, 27);
-}
+
 
 .image-about {
+    display: flex;
     max-width: 400px;
     max-height: auto;
     padding-top: 100px;
@@ -89,9 +88,7 @@
 
 
 }
-.about-img {
-    align-self: center;
-}
+
 .main-cont {
     margin: 15px;
 }
@@ -102,13 +99,20 @@
 .card-body {
     height: 65px;
 }
+.card {
+    margin-bottom: 15px;
+}
 
+// Footer style
 .footer {
 color: white;
-// background-color: rgb(57, 61, 65);
+
 background-color: rgb(1, 46, 107);
 padding-top: 15px;
-height: 135px;
+height: 175px;
+}
+.buttom-fotter {
+    padding-top: 40px;
 }
 .card-info {
     margin-bottom: auto;
@@ -128,11 +132,14 @@ display: flex;
 .copyrights {
 
 color: white;
-// background-color: rgb(57, 61, 65);
+
 background-color: rgb(1, 46, 107);
 justify-content: center;
 font-size: 15px;
 
+}
+.map {
+    justify-content: flex-end;
 }
 .copyrights h1{
     font-size: 15px;
@@ -200,10 +207,12 @@ font-size: 15px;
 }
 
 .icon-title {
+    
     align-self: center;
     text-align: center;
 }
 .fa-plane-departure {
+    padding-top: 25px;
     font-size: 6vw;
     color: rgb(1, 46, 107);
     margin-top: 5px;
@@ -214,11 +223,13 @@ font-size: 15px;
 }
 
 .fa-truck-moving {
+    padding-top: 25px;
     font-size: 6vw;
     color: rgb(1, 46, 107);
     margin-top: 5px;
 }
 .trucking {
+    padding-top: 25px;
     font-size: 7vw;
     color: rgb(1, 46, 107);
 
@@ -235,14 +246,7 @@ font-size: 15px;
    background-color: rgb(237, 81, 27);
 }
 
-.featurette-heading{
-   
-     color:  rgb(237, 81, 27);
-      font-weight: 300;
-    line-height: 1;
-    letter-spacing: -.05rem;
-   
-}
+
 .lead{
      color: rgb(1, 46, 107);
 }
@@ -251,7 +255,23 @@ font-size: 15px;
 
 /* Featurettes
 ------------------------- */
-
+.featurette-divider {
+    margin-top: 3rem;
+    background-color: rgb(237, 81, 27);
+    margin-bottom: 3rem;
+    
+}
+.featurette-form {
+    background-color: rgb(237, 81, 27);
+}
+.featurette-heading{
+   
+     color:  rgb(237, 81, 27);
+      font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+   
+}
 
 
 /* Thin out the marketing headings */
@@ -278,11 +298,37 @@ font-size: 15px;
   }
 }
 // form style
+.dimensions {
+    max-width: 100px;
+    margin-left: 4px;
+}
+.adjust {
+    margin-right: 40px;
+}
+.adjustz {
+    margin-right: 20px;
+}
+.format{
+    display: flex;
+    margin-top: 15px;
+}
+.format-email {
+    margin-left: 4px;
+}
+.address {
+    width: 400px;
+    margin-left: 4px;
+}
 
-   .Quotes-form {
+.contact-form {
   max-width: 800px;
+  max-height: 600px;
   align-self: center;
   display: inline;
+}
+
+.form-buttom {
+    justify-content: center;
 }
 // Quotes card style
 .quotelist{
