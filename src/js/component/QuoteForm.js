@@ -52,7 +52,7 @@ export function QuoteForm(props) {
 					/>
 				</div>
 				<br />
-				<div className="dimensions">
+				<div className="dimensions-login">
 					<input
 						type="number"
 						className="input"

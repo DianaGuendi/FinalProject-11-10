@@ -151,18 +151,7 @@ font-size: 15px;
 }
 
 
-.fa-ship{
-    font-size: 6vw;
-    color: rgb(1, 46, 107);
-    margin-top: 5px;
-}
 
-
-.fa-warehouse{
-    font-size: 6vw;
-    color: rgb(1, 46, 107);
-    margin-top: 5px;
-}
 
 // tracking style
 .display-4 {
@@ -210,6 +199,20 @@ font-size: 15px;
     
     align-self: center;
     text-align: center;
+}
+.fa-ship{
+     padding-top: 25px;
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
+    margin-top: 5px;
+}
+
+
+.fa-warehouse{
+     padding-top: 25px;
+    font-size: 6vw;
+    color: rgb(1, 46, 107);
+    margin-top: 5px;
 }
 .fa-plane-departure {
     padding-top: 25px;
@@ -325,6 +328,10 @@ font-size: 15px;
   max-height: 600px;
   align-self: center;
   display: inline;
+}
+
+.dimensions-login {
+    display: flex;
 }
 
 .form-buttom {
