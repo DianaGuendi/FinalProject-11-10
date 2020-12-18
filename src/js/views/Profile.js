@@ -41,7 +41,7 @@ export function Profile() {
 			{userQuotes.map((quote, index) => (
 				<QuoteCard key={index} quotes={quote} />
 			))}
-			<hr className="featurette-form" />
+			{/* <hr className="featurette-form" /> */}
 		</div>
 	);
 }
